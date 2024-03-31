@@ -36,6 +36,8 @@ padding을 조절하면 border은 그대로, content의 크기는 줄어든다.
 
 padding을 조절하면 content의 크기는 그대로, border의 크기가 늘어난다.
 
+![스크린샷 2024-03-31 131135](https://github.com/skcy1515/Programming-Study/assets/140364849/129542fa-27d0-4613-8c0d-a929f6045224)
+
 기본 박스 모델은 content 박스이다.
 
 그런데 여백이 바뀐다고 해서 박스 자체의 크기가 변하게 되면 
@@ -49,5 +51,7 @@ padding을 조절하면 content의 크기는 그대로, border의 크기가 늘�
 }
 ```
 를 추가하여 모든 박스를 border-box로 지정해둔다.
+
+![화면 캡처 2024-03-31 131218](https://github.com/skcy1515/Programming-Study/assets/140364849/b34d720c-ed5e-4ff8-a2be-50130a33b40f)
 
 [박스 모델 CSS 예제](https://github.com/skcy1515/Programming-Study/blob/main/HTML%26CSS%26Javascript/CSS/01-boxmodel.html)
