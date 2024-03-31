@@ -58,3 +58,5 @@ new 클래스이름(생성자에 맞는 인수 목록)
 제목: Hello Java, 저자: Seo, 페이지: 0
 제목: JPA 프로그래밍, 저자: kim, 페이지: 700
 ```
+[생성자를 이용해 제목, 저자, 페이지를 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/%EA%B8%B0%EB%B3%B8%20%EB%AC%B8%EB%B2%95/%EC%83%9D%EC%84%B1%EC%9E%90/ex/BookMain.java)
+
