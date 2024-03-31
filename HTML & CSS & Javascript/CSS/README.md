@@ -54,4 +54,4 @@ padding을 조절하면 content의 크기는 그대로, border의 크기가 늘�
 
 ![화면 캡처 2024-03-31 131218](https://github.com/skcy1515/Programming-Study/assets/140364849/b34d720c-ed5e-4ff8-a2be-50130a33b40f)
 
-[박스 모델 CSS 예제]([https://github.com/skcy1515/Programming-Study/blob/main/HTML%26CSS%26Javascript/CSS/01-boxmodel.html](https://github.com/skcy1515/Programming-Study/blob/main/HTML%20%26%20CSS%20%26%20Javascript/CSS/01-boxmodel.html))
+[박스 모델 CSS 예제](https://github.com/skcy1515/Programming-Study/blob/main/HTML%20%26%20CSS%20%26%20Javascript/CSS/01-boxmodel.html)
