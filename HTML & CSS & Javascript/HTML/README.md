@@ -40,8 +40,8 @@
 
    [![1](https://github.com/skcy1515/Programming-Study/assets/140364849/43b5156d-0c21-46f8-ac68-8b325309d5c8)
    
-   [인라인 요소와 블록 요소](https://github.com/skcy1515/Programming-Study/blob/main/HTML%26CSS%26Javascript/HTML/01-tag.html)
+   [인라인 요소와 블록 요소](https://github.com/skcy1515/Programming-Study/blob/main/HTML%20%26%20CSS%20%26%20Javascript/HTML/01-tag.html)
 
    ![3](https://github.com/skcy1515/Programming-Study/assets/140364849/ee67eef7-fed4-47b5-b7cb-4f35838c73b7)
 
-   [회원가입 예제](https://github.com/skcy1515/Programming-Study/blob/main/HTML%26CSS%26Javascript/HTML/02-singup.html)
+   [회원가입 예제](https://github.com/skcy1515/Programming-Study/blob/main/HTML%20%26%20CSS%20%26%20Javascript/HTML/02-singup.html)
