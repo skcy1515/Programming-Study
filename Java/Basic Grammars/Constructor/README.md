@@ -41,7 +41,7 @@ new 클래스이름(생성자에 맞는 인수 목록)
 
 참고로 생성자를 메서드 오버로딩 처럼 여러개 정의할 수 있는데, 이 경우에는 하나만 호출하면 된다.
 
-[생성자 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/%EA%B8%B0%EB%B3%B8%20%EB%AC%B8%EB%B2%95/%EC%83%9D%EC%84%B1%EC%9E%90/ConstructMain.java)
+[생성자 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Constructor/ConstructMain.java)
 
 # 기본 생성자
 매개변수가 없는 생성자를 기본 생성자라 한다.
@@ -58,5 +58,4 @@ new 클래스이름(생성자에 맞는 인수 목록)
 제목: Hello Java, 저자: Seo, 페이지: 0
 제목: JPA 프로그래밍, 저자: kim, 페이지: 700
 ```
-[생성자를 이용해 제목, 저자, 페이지를 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/%EA%B8%B0%EB%B3%B8%20%EB%AC%B8%EB%B2%95/%EC%83%9D%EC%84%B1%EC%9E%90/ex/BookMain.java)
-
+[생성자를 이용해 제목, 저자, 페이지를 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Constructor/ex/BookMain.java)
