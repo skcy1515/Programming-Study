@@ -17,10 +17,10 @@
 3. `간결성` : 알고리즘이 이해하기 쉽고 간결하게 작성되었는지 확인한다.
 4. `확장성` : 알고리즘이 입력 크기가 커짐에 따라 성능이 어떻게 변하는지 확인한다.
 
-[세 값의 최댓값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%26%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EA%B8%B0%EB%B3%B8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Main1.java)
+[세 값의 최댓값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%20%26%20Algorithm/Basic%20Algorithm/Main1.java)
 
-[네 값의 최댓값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%26%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EA%B8%B0%EB%B3%B8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Main2.java)
+[네 값의 최댓값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%20%26%20Algorithm/Basic%20Algorithm/Main2.java)
 
-[세 값의 최솟값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%26%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EA%B8%B0%EB%B3%B8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Main3.java)
+[세 값의 최솟값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%20%26%20Algorithm/Basic%20Algorithm/Main3.java)
 
-[세 값의 중앙값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%26Algorithm/%EA%B8%B0%EB%B3%B8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/Main4.java)
+[세 값의 중앙값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%20%26%20Algorithm/Basic%20Algorithm/Main4.java)
