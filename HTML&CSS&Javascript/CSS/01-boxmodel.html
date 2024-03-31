@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       div {
         width: 80px;
         height: 80px;
         border: 1px solid red;
+        margin: 20px;
         padding: 10px;
       }
+
+      /*
 
       #contentBox {
         box-sizing: content-box;
@@ -19,11 +26,14 @@
       #borderBox {
         box-sizing: border-box;
       }
+
+      */
     </style>
   </head>
   <body>
-    <div id="contentBox">박스 1</div>
-    <div>박스 2</div>
-    <div id="borderBox">박스 3</div>
+    <div id="contentBox">content 박스입니다.</div>
+    <div>기본 박스입니다.</div>
+    <!--기본: content box-->
+    <div id="borderBox">border 박스입니다.</div>
   </body>
 </html>
