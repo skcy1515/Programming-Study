@@ -21,3 +21,7 @@
 *****
 ```
 [터틀 그래픽 문법 예제](https://github.com/skcy1515/Programming-Study/blob/main/Python/2.py)
+
+[리스트에 값 추가 예제](https://github.com/skcy1515/Programming-Study/blob/main/Python/3.py)
+
+[공백으로 구분하면서 입력받아 리스트에 값 추가하는 예제](https://github.com/skcy1515/Programming-Study/blob/main/Python/4.py)
