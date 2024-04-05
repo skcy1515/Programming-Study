@@ -99,3 +99,9 @@ public class BankAccountMain {
 
 # 문제
 [쇼핑카트에 아이템을 담아서 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Access%20Modifier/ex/ShoppingCartMain.java)
+```
+장바구니를 출력합니다.
+상품명 : 마늘, 가격 : 2000, 수량 : 2
+상품명 : 상추, 가격 : 3000, 수량 : 4
+총 가격: 16000
+```
