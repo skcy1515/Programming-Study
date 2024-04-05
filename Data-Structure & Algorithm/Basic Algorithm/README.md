@@ -24,3 +24,4 @@
 [세 값의 최솟값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%20%26%20Algorithm/Basic%20Algorithm/Main3.java)
 
 [세 값의 중앙값을 구하여 출력](https://github.com/skcy1515/Programming-Study/blob/main/Data-Structure%20%26%20Algorithm/Basic%20Algorithm/Main4.java)
+ 
