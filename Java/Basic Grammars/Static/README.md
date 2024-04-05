@@ -125,4 +125,3 @@ average=3
 min=1
 max=5
 ```
-
