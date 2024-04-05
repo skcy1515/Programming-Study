@@ -92,3 +92,4 @@ query parameter, query string 등으로 불림, 웹서버에 제공하는 파라
 3. TCP/IP 패킷 생성, HTTP 메시지 포함
 
 4. 데이터 전송
+
