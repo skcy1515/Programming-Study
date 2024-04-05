@@ -27,3 +27,72 @@ HTTP가 전송하는 것들에는 다음과 같은 것들이 있다.
    - 한계 : TCP/IP 연결 (3 way handshaking 시간 추가)을 새로 맺어야 하고, 웹 브라우저로 사이트를 요청하면 HTML 뿐만 아니라 자바스크립트, css, 추가 이미지 등 수 많은 자원들을 다운로드 해야한다.
    - HTTP 초기 : 연결, HTML 응답, 종료, 연결, 자바스크립트 응답, 종료, 연결, 이미지 응답, 종료 총 0.9초)
    - 지금은 `HTTP 지속 연결` (클라이언트와 서버 간의 여러 HTTP 요청과 응답을 하나의 TCP 연결을 통해 처리하는 기술)로 문제 해결 -> 연결, HTML 응답, 자바스크립트 응답, 이미지 응답, 종료 총 0.5초, 또한 HTML 2, 3으로 발전하면서 더 많은 최적화가 이루어지고 있음
+  
+# HTTP 메시지
+HTTP 메시지 구조는 다음과 같이 이루어져 있다.
+- start-line 시작 라인
+- header 헤더
+- empty line 공백 라인 (CRLF)
+- message body
+
+ex) 요청 메시지
+```
+GET /search?q=hello&hl=ko HTTP/1.1
+Host: www.google.com
+
+ ```
+
+ex) 응답 메시지
+```
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Content-Length: 3423 message body
+
+<html>
+   <body>...</body>
+</html>
+```
+
+### 시작 라인
+시작 라인은 요청 메시지(Request-Line)와 응답 메시지(Status-Line)으로 나누어져 있다.
+
+`요청 메시지 (Request-Line)` = method SP(공백) request-target SP HTTP-version CRLF(엔터)
+```
+GET /search?q=hello&hl=ko HTTP/1.1
+```
+- HTTP 메서드 (GET: 조회, POST: 요청 내역 처리)
+- 요청 대상 (/search?q=hello&hl=ko), 절대경로 "/"로 시작
+- HTTP Version
+
+`응답 메시지 (Status-Line)` = HTTP-version SP status-code SP reason-phrase CRLF
+```
+HTTP/1.1 200 OK
+```
+- HTTP 버전
+- HTTP 상태 코드: 요청 성공, 실패를 나타냄
+   - 200: 성공
+   - 400: 클라이언트 요청 오류
+   - 500: 서버 내부 오류
+- 이유 문구: 사람이 이해할 수 있는 짧은 상태 코드 설명 글
+
+### 헤더
+HTTP 전송에 필요한 모든 부가정보
+- ex) 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트(브라우저) 정보, 서버 애플리케이션 정보, 캐시 관리 정보...
+```
+// 요청 메시지 헤더
+Host: www.google.com
+
+// 응답 메시지 헤더
+Content-Type: text/html;charset=UTF-8
+Content-Length: 3423 message body
+```
+
+### 메시지 바디
+용도
+- 실제 전송할 데이터
+- HTML 문서, 이미지, 영상, JSON 등등 byte로 표현할 수 있는 모든 데이터 전송 가능
+```
+<html>
+   <body>...</body>
+</html>
+```
