@@ -1,25 +1,16 @@
-arrs = [[], [], []]
-counts = [0, 0, 0]
+import turtle as t
 
-def printCount(counts):
-    for i in range(3):
-        if (counts[i] == 3):
-            print("A")
-        elif (counts[i] == 2):
-            print("B")
-        elif (counts[i] == 1):
-            print("C")
-        elif (counts[i] == 4):
-            print("E")
-        elif (counts[i] == 0):
-            print("D")
+colors = ["yellow", "green", "blue", "purple", "red", "orange"] # 색깔 리스트
 
-for i in range(3):
-    a = list(map(int, input().split())) # 여러개의 값을 공백으로 나누어 입력받아 a 리스트에 저장
-    arrs[i] = a[:] # arr[i]에 a 리스트 복사
-    for j in range(len(a)):
-        if (a[j] == 1):
-            counts[i] = counts[i] + 1
+screen = t.Screen() # 스크린 객체 생성
 
-printCount(counts)
+screen.bgcolor("black") # 배경색 검정으로 지정
 
+t.speed(0) # 최대한 빠르게
+
+t.pensize(3)
+
+for i in range(97):
+    t.color(colors[i % len(colors)])
+    t.right(89)
+    t.forward(15 + i*5) 
