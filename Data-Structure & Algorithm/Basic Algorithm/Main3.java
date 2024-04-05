@@ -18,3 +18,4 @@ public class Main3 {
         System.out.println("최솟값은 " + min + "입니다.");
     }
 }
+ 
