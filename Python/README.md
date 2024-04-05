@@ -20,8 +20,20 @@
  ****
 *****
 ```
-[터틀 그래픽 문법 예제](https://github.com/skcy1515/Programming-Study/blob/main/Python/2.py)
+[공백으로 구분하면서 입력받아 리스트에 값 추가하는 예제 (윷놀이)](https://github.com/skcy1515/Programming-Study/blob/main/Python/2.py)
+```
+1 0 1 0
+1 1 1 1
+0 0 0 0
+// 실행 결과
+B
+E
+D
+```
+[무지개 색 원 그리기](https://github.com/skcy1515/Programming-Study/blob/main/Python/3.py)
 
-[리스트에 값 추가 예제](https://github.com/skcy1515/Programming-Study/blob/main/Python/3.py)
+![무지개색 원](https://github.com/skcy1515/Programming-Study/assets/140364849/ecabd671-8786-4222-b926-34be4a75fcd8)
 
-[공백으로 구분하면서 입력받아 리스트에 값 추가하는 예제](https://github.com/skcy1515/Programming-Study/blob/main/Python/4.py)
+[무지개 색 스파이럴 그리기](https://github.com/skcy1515/Programming-Study/blob/main/Python/4.py)
+
+![무지개색 스파이럴](https://github.com/skcy1515/Programming-Study/assets/140364849/9b3815c7-1edd-4ea1-94ac-20a000065652)
