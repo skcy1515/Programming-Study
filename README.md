@@ -13,3 +13,4 @@ $ git clone [원격저장소 주소] // 원격저장소 로컬저장소에 복�
 $ git config --global core.autocrlf true // git add 전 LF will be replaced by CRLF 에러 해결
 // 프로젝트의 코드를 처음으로 내 컴퓨터에 가져오려면 git clone을 사용, 이미 로컬에 프로젝트가 있고 그것을 최신 상태로 유지하려면 git pull을 사용
 ```
+
