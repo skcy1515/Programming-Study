@@ -41,8 +41,40 @@ new 클래스이름(생성자에 맞는 인수 목록)
 
 참고로 생성자를 메서드 오버로딩 처럼 여러개 정의할 수 있는데, 이 경우에는 하나만 호출하면 된다.
 
-[생성자 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Constructor/ConstructMain.java)
+생성자 예제
+```
+package Constructor;
 
+// MemberConstruct.java
+public class MemberConstruct {
+    String name;
+    int age;
+    int grade;
+
+    MemberConstruct(String name, int age, int grade) {
+        this.age = age;
+        this.name = name;
+        this.grade = grade;
+        System.out.println("생성자 호출 name=" + name + ",age=" + age + ",grade=" + grade);
+    }
+
+    MemberConstruct(String name, int age) { // 생성자 오버로딩
+        this.name = name;
+        this.age = age;
+        this.grade = 50;
+        System.out.println("생성자 호출 name=" + name + ",age=" + age + ",grade=" + grade);
+    }
+}
+
+// ConstructMain.java
+public class ConstructMain {
+    public static void main(String[] args) {
+        MemberConstruct member1 = new MemberConstruct("user1", 15, 90);
+        MemberConstruct member2 = new MemberConstruct("user2", 16, 80);
+        MemberConstruct member3 = new MemberConstruct("user3", 17);
+    }
+}
+```
 # 기본 생성자
 매개변수가 없는 생성자를 기본 생성자라 한다.
 
@@ -53,9 +85,58 @@ new 클래스이름(생성자에 맞는 인수 목록)
 생성자가 하나라도 있으면 자바는 기본 생성자를 만들지 않는다.
 
 # 문제
+생성자를 이용해 제목, 저자, 페이지를 출력하는 프로그램
+```
+package Constructor.ex;
+
+// Book.java
+public class Book {
+    String title;
+    String author;
+    int pages;
+
+    Book() {
+        this.title = "";
+        this.author = "";
+        this.pages = 0;
+    }
+
+    Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+        this.pages = 0;
+    }
+    Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    public void displayInfo(){
+        System.out.println("제목: " + title + ", 저자: " + author + ", 페이지: " + pages);
+    }
+}
+
+// BookMain.java
+public class BookMain {
+    public static void main(String[] args) {
+        // 기본 생성자 사용
+        Book book1 = new Book();
+        book1.displayInfo();
+
+        // title과 author만을 매개변수로 받는 생성자
+        Book book2 = new Book("Hello Java", "Seo");
+        book2.displayInfo();
+
+        // 모든 필드를 매개변수로 받는 생성자
+        Book book3 = new Book("JPA 프로그래밍", "kim", 700);
+        book3.displayInfo();
+    }
+}
+```
+실행결과
 ```
 제목: , 저자: , 페이지: 0
 제목: Hello Java, 저자: Seo, 페이지: 0
 제목: JPA 프로그래밍, 저자: kim, 페이지: 700
 ```
-[생성자를 이용해 제목, 저자, 페이지를 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Constructor/ex/BookMain.java)
