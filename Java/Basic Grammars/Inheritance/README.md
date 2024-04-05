@@ -158,3 +158,4 @@ public class ClassC extends ClassB {
 
 # 문제
 [상속을 이용하여 쇼핑몰 판매 상품 만들기](https://github.com/skcy1515/Programming-Study/tree/main/Java/Basic%20Grammars/Inheritance/ex)
+
