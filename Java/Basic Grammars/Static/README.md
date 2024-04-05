@@ -63,4 +63,66 @@ static 메서드는 static이 붙은 정적 메서드나 정적 변수만 사용
 따라서 가장 긴 생명주기를 가진다
 
 # 문제
-[수학 계산을 static 메서드로 구현한 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Static/MathMain.java)
+수학 계산을 static 메서드로 구현한 예제
+```
+package Static;
+
+// Math.java
+public class Math {
+
+    public static int sum(int[] values) {
+        int sum = 0;
+        for (int value : values) {
+            sum = sum + value;
+        }
+        return sum;
+    }
+
+    public static int average(int[] values) {
+        int sum = 0;
+        for (int value : values) {
+            sum = sum + value;
+        }
+        return (sum / values.length);
+    }
+
+    public static int min(int[] values) {
+        int min = values[0];
+        for (int value : values) {
+            if (min > value) {
+                min = value;
+            }
+        }
+        return min;
+    }
+
+    public static int max(int[] values) {
+        int max = values[0];
+        for (int value : values) {
+            if (max < value) {
+                max = value;
+            }
+        }
+        return max;
+    }
+}
+
+// MathMain.java
+public class MathMain {
+    public static void main(String[] args) {
+        int[] values = {1, 2, 3, 4, 5};
+        System.out.println("sum=" + Math.sum(values));
+        System.out.println("average=" + Math.average(values));
+        System.out.println("min=" + Math.min(values));
+        System.out.println("max=" + Math.max(values));
+    }
+}
+```
+// 실행 결과
+```
+sum=15
+average=3
+min=1
+max=5
+```
+
