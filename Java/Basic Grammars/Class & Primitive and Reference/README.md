@@ -43,8 +43,42 @@ Student s2 = s1;
 ```
 그런데 참조형의 경우 실제 사용하는 객체가 아니라 객체의 위치를 가리키는 참조값(주소값)만 복사된다. 
 
-[참조형과 변수 대입 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Class%20%26%20Primitive%20and%20Reference/VarChange.java)
+참조형과 변수 대입 예제
+```
+package PrimaryReference;
 
+// Data.java
+public class Data {
+    int value;
+}
+
+// VarChange.java
+public class VarChange {
+    public static void main(String[] args) {
+        Data dataA = new Data(); // dataA 변수에 Data형 객체의 참조값 저장
+        dataA.value = 10; // 객체의 value 값을 10으로 바꿔줌
+        Data dataB = dataA; // dataA의 참조값을 복사하여 dataB에 저장
+        // 즉, dataB가 가리키는 값은 dataA가 가리키는 값과 같아진다.
+
+        System.out.println("dataA 참조값=" + dataA); // PrimaryReference.Data@2f4d3709
+        System.out.println("dataB 참조값=" + dataB); // PrimaryReference.Data@2f4d3709
+        System.out.println("dataA.value = " + dataA.value); // 10
+        System.out.println("dataB.value = " + dataB.value); // 10
+
+        //dataA 변경
+        dataA.value = 20;
+        System.out.println("변경 dataA.value = 20");
+        System.out.println("dataA.value = " + dataA.value); // 20
+        System.out.println("dataB.value = " + dataB.value); // 20
+
+        //dataB 변경
+        dataB.value = 30;
+        System.out.println("변경 dataB.value = 30");
+        System.out.println("dataA.value = " + dataA.value); // 30
+        System.out.println("dataB.value = " + dataB.value); // 30
+    }
+}
+```
 # 기본형과 참조형 메서드 호출
 자바는 항상 변수의 값을 복사해서 대입한다.
 
@@ -56,16 +90,115 @@ Student s2 = s1;
 
 이 경우, 메서드 내부에서 매개변수(파라미터)의 값을 변경해도, 호출자의 변수 값에는 영향이 없다.
 
-[기본형과 메서드 호출 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Class%20%26%20Primitive%20and%20Reference/MethodChange1.java)
+기본형과 메서드 호출 예제
+```
+package PrimaryReference;
+
+public class MethodChange1 {
+    public static void main(String[] args) {
+        int a = 10;
+        System.out.println("메서드 호출 전 a의 값: " + a); // 10
+        changePrimitive(a);
+        System.out.println("메서드 호출 후 a의 값: "+a); // 10
+    }
+
+    static void changePrimitive (int x) {
+        x = 20;
+        // 메서드가 종료되면 매개변수 x는 제거됨
+    }
+}
+```
 
 `참조형` : 메서드로 참조형 데이터를 전달하면, 참조값이 복사되어 전달된다. 
 
 이 경우, 메서드 내부에서 매개변수(파라미터)로 전달된 객체의 멤버 변수를 변경하면, 호출자의 객체도 변경된다
 
-[참조형과 메서드 호출 예제](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Class%20%26%20Primitive%20and%20Reference/MethodChange2.java)
+참조형과 메서드 호출 예제
+```
+package PrimaryReference;
 
+public class MethodChange2 {
+    public static void main(String[] args) {
+        Data dataA = new Data();
+        dataA.value = 10;
+        System.out.println("메서드 호출 전: dataA.value = " + dataA.value);
+        changeReference(dataA);
+        System.out.println("메서드 호출 후: dataA.value = " + dataA.value);
+    }
+
+    static void changeReference(Data dataX) { // Data dataX = dataA와 같음
+        dataX.value = 20; // Data 객체의 값 변경
+    }
+}
+```
 # 문제
-[상품명, 가격, 수량을 n번 입력받아 출력하고, 총 가격까지 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Class%20%26%20Primitive%20and%20Reference/ex/ProductOrderMain.java)
+상품명, 가격, 수량을 n번 입력받아 출력하고, 총 가격까지 출력하는 프로그램
+```
+package PrimaryReference.ex;
+
+// Product.java
+public class Product {
+    String productName;
+    int price;
+    int quantity;
+
+    public Product createProduct(String productName, int price, int quantity) {
+        Product products1 = new Product();
+        products1.productName = productName;
+        products1.price = price;
+        products1.quantity = quantity;
+        return products1;
+    }
+
+    public void printProduct(Product[] products) {
+        for (Product product : products) {
+            System.out.println("상품명: " + product.productName + ", 가격: " + product.price + ", 수량: " + product.quantity);
+        }
+    }
+
+    public void getTotalAmount(Product[] products) {
+        int totalAmount = 0;
+        for (Product product : products) {
+            totalAmount += product.price * product.quantity;
+        }
+        System.out.println("총 가격은 " + totalAmount + "입니다.");
+    }
+}
+
+// ProductOrderMain.java
+import java.util.Scanner;
+
+public class ProductOrderMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("입력할 주문의 개수를 입력하세요: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // 엔터키를 통해 입력 버퍼 없앰
+        Product[] products = new Product[n];
+        Product product = new Product();
+
+        for (int i=0; i<n; i++) {
+            System.out.println((i + 1) + "번째 주문 정보를 입력하세요.");
+
+            System.out.print("상품명: ");
+            String productName = scanner.nextLine();
+
+            System.out.print("가격: ");
+            int price = scanner.nextInt();
+
+            System.out.print("수량: ");
+            int quantity = scanner.nextInt();
+            scanner.nextLine();
+
+            products[i] = product.createProduct(productName, price, quantity);
+        }
+        product.printProduct(products);
+        product.getTotalAmount(products);
+        scanner.close();
+    }
+}
+```
+실행결과
 ```
 입력할 주문의 개수를 입력하세요: 3
 1번째 주문 정보를 입력하세요.
