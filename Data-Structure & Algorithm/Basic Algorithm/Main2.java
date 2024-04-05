@@ -20,3 +20,4 @@ public class Main2 {
         System.out.println("최댓값은 " + max + "입니다.");
     }
 }
+ 
