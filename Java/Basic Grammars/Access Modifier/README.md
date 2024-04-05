@@ -98,7 +98,78 @@ public class BankAccountMain {
 `getBalance()` : 잔고 출력
 
 # 문제
-[쇼핑카트에 아이템을 담아서 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Access%20Modifier/ex/ShoppingCartMain.java)
+쇼핑카트에 아이템을 담아서 출력하는 프로그램
+```
+package access.ex;
+
+// Item.java
+public class Item {
+    private String name;
+    private int price;
+    private int quantity;
+
+    public Item(String name, int price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int gerPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+}
+
+// ShoppingCart.java
+public class ShoppingCart {
+    private Item[] items = new Item[10];
+    private int itemCount = 0;
+
+    public void addItem(Item item) {
+        if (itemCount >= 10) {
+            System.out.println("장바구니가 가득 찼습니다.");
+            return;
+        } else {
+            items[itemCount] = item;
+            itemCount++;
+        }
+    }
+
+    public void displayItems() {
+        int total = 0;
+        System.out.println("장바구니를 출력합니다.");
+        for (int i=0; i<itemCount; i++) {
+            Item item = items[i];
+            System.out.println("상품명 : " + item.getName() + ", 가격 : " + item.gerPrice() + ", 수량 : " + item.getQuantity());
+            total += item.gerPrice() * item.getQuantity();
+        }
+        System.out.println("총 가격: " + total);
+    }
+}
+
+// ShoppingCartMain.java
+public class ShoppingCartMain {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+
+        Item item1 = new Item("마늘", 2000, 2);
+        Item item2 = new Item("상추", 3000, 4);
+
+        cart.addItem(item1);
+        cart.addItem(item2);
+
+        cart.displayItems();
+    }
+}
+```
+실행결과
 ```
 장바구니를 출력합니다.
 상품명 : 마늘, 가격 : 2000, 수량 : 2
