@@ -37,3 +37,45 @@ D
 [무지개 색 스파이럴 그리기](https://github.com/skcy1515/Programming-Study/blob/main/Python/4.py)
 
 ![무지개색 스파이럴](https://github.com/skcy1515/Programming-Study/assets/140364849/9b3815c7-1edd-4ea1-94ac-20a000065652)
+
+[리스트에 요소가 있는지 확인하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Python/5.py)
+```
+level
+True
+rotator
+True
+hello
+False
+```
+[스택 append, pop, 스택 총합 출력하는 프로그램](https://github.com/skcy1515/Programming-Study/blob/main/Python/6.py)
+
+0을입력하면 최근에 입력한 숫자 삭제
+```
+6
+1
+2
+3
+0 
+0
+5
+# 결과
+6
+```
+[중복되지 않는 값을 리스트에 저장한 후 오름차순 정렬](https://github.com/skcy1515/Programming-Study/blob/main/Python/7.py)
+```
+7
+6
+6
+5
+2
+1
+3
+4
+# 결과
+1
+2
+3
+4
+5
+6
+```
