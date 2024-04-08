@@ -23,3 +23,44 @@
 5. 원하는 인덱스의 데이터 삭제
 6. 마지막 데이터 삭제
 7. 원하는 인덱스 데이터 읽기
+
+### 원하는 인덱스에 데이터 삽입 
+
+```
+insertAt(index, data) {
+    // 원하는 인덱스에 데이터 삽입
+    if (index > this.count || index < 0) {
+      // 연결리스트의 크기보다 큰 곳에 삽입하거나, 음수 위치에 삽입 불가
+      throw new Error("범위를 넘어갔습니다.");
+    }
+
+    let newNode = new Node(data); // 새로 삽입할 노드 생성
+
+    if (index == 0) {
+      // 리스트의 가장 앞부분에 삽입할 경우
+      newNode.next = this.head; // 새로운 노드의 next를 현재의 헤드 노드로 설정하여 새로운 노드가 첫 번째 노드를 가리키도록 함
+      this.head = newNode; // 리스트의 헤드를 새로운 노드로 변경
+    } else {
+      // 인덱스가 0이 아닐 경우 삽입할 위치까지 이동해야 함
+      let currentNode = this.head; // 현재 노드를 리스트의 헤드로 설정
+
+      for (let i = 0; i < index - 1; i++) {
+        // 삽입할 인덱스 직전까지 반복하여 현재 노드를 찾기
+        currentNode = currentNode.next;
+      }
+      newNode.next = currentNode.next; // 새로운 노드의 next를 현재 노드의 next로 설정하여 새로운 노드가 현재 노드 다음을 가리키도록 함
+      currentNode.next = newNode; //  현재 노드의 next를 새로운 노드로 설정하여 현재 노드가 새로운 노드를 가리키도록 함
+    }
+    this.count++; // 총 노드 수 증가
+  }
+```
+1. newNode를 통해 새로운 노드의 데이터를 설정한다.
+2. 리스트의 가장 앞 부분에 삽입할 때: 이럴 때는 새로 삽입하는 노드가 head가 되어야 하므로
+새로 생성한 노드의 next가 head (다음 노드)를 가리키게 하고,
+새로 생성한 노드를 head로 변경하면 된다.
+
+3. 리스트의 원하는 인덱스에 삽입할 때
+만약 인덱스 3에 삽입할 경우
+currentNode로 세 번째 떨어진 노드 전까지 이동하고
+newNode가 currentNode가 가리키던 노드, 즉 세 번째 노드를 가리키게 한다.
+그리고 currentNode가 newNode를 가리키게 하면 끝난다
