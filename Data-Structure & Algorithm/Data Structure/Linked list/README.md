@@ -56,11 +56,91 @@ insertAt(index, data) {
 ```
 1. newNode를 통해 새로운 노드의 데이터를 설정한다.
 2. 리스트의 가장 앞 부분에 삽입할 때: 이럴 때는 새로 삽입하는 노드가 head가 되어야 하므로
-새로 생성한 노드의 next가 head (다음 노드)를 가리키게 하고,
-새로 생성한 노드를 head로 변경하면 된다.
+![1](https://github.com/skcy1515/Programming-Study/assets/140364849/6e82f85d-2797-4060-8489-87973eb0d5bc)
 
-3. 리스트의 원하는 인덱스에 삽입할 때
-만약 인덱스 3에 삽입할 경우
-currentNode로 세 번째 떨어진 노드 전까지 이동하고
-newNode가 currentNode가 가리키던 노드, 즉 세 번째 노드를 가리키게 한다.
-그리고 currentNode가 newNode를 가리키게 하면 끝난다
+새로 생성한 노드의 next가 head (처음 노드)를 가리키게 하고,
+   
+```
+newNode.next = this.head;
+```
+   
+![2](https://github.com/skcy1515/Programming-Study/assets/140364849/5eee67b7-2f99-4017-a0a8-541f2c377563)
+
+새로 생성한 노드를 head로 변경하면 된다.
+      
+```
+this.head = newNode;
+```
+        
+3. 리스트의 원하는 인덱스에 삽입할 때: 만약 인덱스 3에 삽입할 경우
+
+![3](https://github.com/skcy1515/Programming-Study/assets/140364849/fc827e90-b73c-4287-a4ad-321101cadb7f)
+
+currentNode를 head (처음 노드)로 설정하고 세 번째 떨어진 노드 전까지 이동한다.
+```
+let currentNode = this.head; // 현재 노드를 리스트의 헤드로 설정
+
+for (let i = 0; i < index - 1; i++) {
+// 삽입할 인덱스 직전까지 반복하여 현재 노드를 찾기
+    currentNode = currentNode.next;
+}
+```
+![4](https://github.com/skcy1515/Programming-Study/assets/140364849/af2f9a20-912f-4b25-9905-1cc03d823591)
+
+그리고 newNode가 currentNode가 가리키던 노드, 즉 세 번째 노드를 가리키게 하고, currentNode가 newNode를 가리키게 하면 끝난다
+```
+newNode.next = currentNode.next; // 새로운 노드의 next를 현재 노드의 next로 설정하여 새로운 노드가 현재 노드 다음을 가리키도록 함
+currentNode.next = newNode; //  현재 노드의 next를 새로운 노드로 설정하여 현재 노드가 새로운 노드를 가리키도록 함
+```
+
+### 원하는 인덱스 데이터 삭제
+```
+deleteAt(index) {
+    if (index > this.count || index < 0) {
+      throw new Error("범위를 넘어갔습니다.");
+    }
+    let currentNode = this.head;
+
+    if (index == 0) {
+      let deleteNode = this.head;
+      this.head = this.head.next;
+      this.count--;
+      return deleteNode;
+    } else {
+      for (let i = 0; i < index - 1; i++) {
+        currentNode = currentNode.next;
+      }
+      let deleteNode = currentNode.next;
+      currentNode.next = currentNode.next.next;
+      this.count--;
+      return deleteNode;
+    }
+  }
+```
+1. currentNode를 헤드 (시작 노드)로 설정한다.
+2. 인덱스가 0인 경우:
+
+![5](https://github.com/skcy1515/Programming-Study/assets/140364849/23c6ae80-9ea9-4b3a-925e-8c9f6be64f8d)
+
+deleteNode를 헤드로 설정한 후 헤드를 헤드가 가리키는 곳 (다음 노드)로 설정한다. 즉, 원래 있던 헤드는 삭제되어 deleteNode로 반환된다.
+```
+let deleteNode = this.head;
+this.head = this.head.next;
+this.count--;
+return deleteNode;
+```
+
+3. 원하는 인덱스 제거 시:
+
+![6](https://github.com/skcy1515/Programming-Study/assets/140364849/02724ba0-ac32-459b-95e6-a977f0e7c937)
+
+currentNode를 제거할 인덱스 직전까지 이동한 후 deleteNode를 currentNode.next로 currentNode가 가리키는 곳으로 설정한다. 그리고 currentNode를 제거할 노드의 next 노드를 가리키게 한다.
+```
+for (let i = 0; i < index - 1; i++) {
+    currentNode = currentNode.next;
+}
+let deleteNode = currentNode.next;
+currentNode.next = currentNode.next.next;
+this.count--;
+return deleteNode;
+```
