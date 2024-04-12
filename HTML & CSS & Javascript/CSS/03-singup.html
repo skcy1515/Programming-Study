@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 가입</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f8f8;
+      }
+
+      #A {
+        width: 670px;
+        height: 700px;
+        border: 1px solid rgb(59, 144, 242);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        background-color: #fff;
+        box-shadow: 5px 5px 20px rgb(210, 231, 255);
+      }
+
+      #B {
+        width: 470px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column; /* 자식 박스를 세로로 나열 */
+        justify-content: center; /* 부모 박스의 가로를 기준으로 가운데 정렬 */
+        align-items: center; /* 부모 박스의 세로를 기준으로 가운데 정렬 */
+      }
+
+      h2 {
+        color: rgb(59, 144, 242);
+        margin: 30px;
+      }
+
+      input[type="email"],
+      input[type="text"],
+      input[type="password"],
+      select,
+      input[type="radio"],
+      input[type="checkbox"],
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        border-width: 0 0 1px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin: 15px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+
+      button {
+        background-color: rgb(59, 144, 242);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #77aeed;
+      }
+
+      hr {
+        width: 400px;
+        border: 1px solid#dadada;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="A">
+      <div id="B">
+        <h2>회원가입을 위해<br />정보를 입력해주세요</h2>
+        <input type="email" placeholder="이메일을 입력해 주세요." />
+        <input type="text" placeholder="이름을 입력해 주세요." />
+        <input type="password" placeholder="비밀번호를 입력해 주세요." />
+        <input type="password" placeholder="비밀번호를 다시 입력해 주세요." />
+        <select>
+          <option disabled="true" selected="true">지역을 선택하세요.</option>
+          <option>서울</option>
+          <option>경기</option>
+          <option>인천</option>
+        </select>
+        <div>
+          <label for="female"
+            ><input type="radio" name="gender" id="female" /> 여성</label
+          >
+          <label for="male"
+            ><input type="radio" name="gender" id="male" /> 남성</label
+          >
+        </div>
+        <label for="agree"
+          ><input type="checkbox" id="agree" />이용약관 개인정보 수집 및
+          동의</label
+        >
+        <hr />
+        <button>가입하기</button>
+      </div>
+    </div>
+  </body>
+</html>
