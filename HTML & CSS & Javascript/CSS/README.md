@@ -56,5 +56,20 @@ padding을 조절하면 content의 크기는 그대로, border의 크기가 늘�
 
 [박스 모델 CSS 예제](https://github.com/skcy1515/Programming-Study/blob/main/HTML%20%26%20CSS%20%26%20Javascript/CSS/01-boxmodel.html)
 
-[회원가입 페이지 예제](![회원가입 예제 꾸미기](https://github.com/skcy1515/Programming-Study/assets/140364849/002e1f73-8256-4796-9354-5954d41acef5))
+# flex 정렬
+여러 태그를 하나로 묶어서 정렬
+
+```
+display: flex;
+flex-direction: column; /* 자식 박스를 세로로 나열 */
+flex-direction: row; /* 자식 박스를 가로로 나열 */
+justify-content: center; /* 부모 박스의 가로를 기준으로 가운데 정렬 */
+align-items: center; /* 부모 박스의 세로를 기준으로 가운데 정렬 */
+```
+
+flex-direction과 justify-content는 같은 방향으로 움직인다
+
+[회원 가입 예제](https://github.com/skcy1515/Programming-Study/blob/main/HTML%20%26%20CSS%20%26%20Javascript/CSS/03-singup.html)
+
+![회원가입 예제 꾸미기](https://github.com/skcy1515/Programming-Study/assets/140364849/002e1f73-8256-4796-9354-5954d41acef5)
  
