@@ -79,3 +79,6 @@ False
 5
 6
 ```
+[화면 중앙 밖으로 나가는 거북이](https://github.com/skcy1515/Programming-Study/blob/main/Python/8.py)
+
+![q](https://github.com/skcy1515/Programming-Study/assets/140364849/00379eba-3dc9-46ef-9e14-ee6829f301d6)
