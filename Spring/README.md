@@ -21,7 +21,56 @@ Gradle은 Maven과 유사하게 빌드 자동화 도구이지만, Maven보다 �
 1. [자바, 인텔리제이 설치](https://github.com/skcy1515/Programming-Study/blob/main/Java/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4%2C%20%EC%9E%90%EB%B0%94%20%EC%84%A4%EC%B9%98.pdf)
 2. https://start.spring.io/ 이동하여 프로젝트 생성
 
+![1](https://github.com/skcy1515/Programming-Study/assets/140364849/9020eae2-e8f6-41bd-823e-8655d7ca050d)
+
 - Group - 보통 기업 도메인 명을 적어줌
 - Artifact - 빌드 결과물을 식별하는 이름
 - Dependencies - 어떤 라이브러리를 사용할 건지 (스프링으로 웹을 만들기 위해 Spring Web과 정적인 HTML 파일에 동적으로 변경되는 데이터를 삽입하여 동적으로 생성된 웹 페이지를 제공할 수 있도록 도와주는 템플릿 엔진인 thymeleaf 사용)
+
+![2](https://github.com/skcy1515/Programming-Study/assets/140364849/d31d3e9d-dac8-48b5-813a-30750c2e59f1)
+
+![3](https://github.com/skcy1515/Programming-Study/assets/140364849/ef5e9e03-a415-43b5-9ffe-7a4b5f8c0fe4)
+
+3. 인텔리제이 실행하여 build.gradle 파일 선택하고 open, 설정에서 IntelliJ Gradle 대신에 자바 직접 실행으로 바꿔주기 (더 빠름)
+
+# 스프링 구성
+![gradle](https://github.com/skcy1515/Programming-Study/assets/140364849/bd89515f-74d8-45cb-bac0-fbd2e5b17c1c)
+- .idea: 인텔리제이가 사용하는 설정 파일
+- gradle/ wrapper: 미리 선언된 버전의 Gradle을 호출하고, 필요한 경우 미리 다운로드 및 설치하여 빌드 해줌
+- src/ main, test - test코드와 main 코드 나누어져 있
+- main/ resources - 자바 코드 파일을 제외한 html, xml, properties같은 설정 파일이 들어가 있음
+
+### build.gradle
+```
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.4'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '22'
+}
+```
+자바, 스프링 버전 명시
+
+```
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+```
+- repositories: 프로젝트가 의존성을 가져올 Maven 저장소를 지정, 여기서는 Maven Central 저장소를 사용
+- dependencies: 프로젝트의 의존성을 설정 (라이브러리 가져옴)
+- testImplementation: 자동으로 설치되는 테스트 라이브러리
+- 의존성(dependency): 프로젝트가 다른 코드 또는 라이브러리에 의존하여 작동할 수 있도록 하는 것을 의미
+
 
