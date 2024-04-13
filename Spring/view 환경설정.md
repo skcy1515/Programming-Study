@@ -66,23 +66,8 @@ resources/templates/hello.html 생성
 
 # 빌드하고 실행하기
 1. cmd창에 cd 파일경로(C:\Users\skcy1\OneDrive\Desktop\코딩\Programming-Study\Spring\hello-spring) 입력 후 gradlew.bat 입력
-2. gradlew build 입
+2. gradlew build -x test 입력
+3. cd build, dir libs 입력하여 jar 파일 이름 확인
+4. cd libs 입력 후 java -jar 파일 이름 입력   
 
 ![image](https://github.com/skcy1515/Programming-Study/assets/140364849/c291202d-de0b-4c36-8629-ad41467f49e7)
-
-
-
-
-
-`build.gralde`
-```
-tasks.named('test') {
-	useJUnitPlatform()
-}
-```
-변경 후
-```
-test {
-	useJUnitPlatform()
-}
-```
