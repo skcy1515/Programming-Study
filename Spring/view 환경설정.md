@@ -69,5 +69,3 @@ resources/templates/hello.html 생성
 2. gradlew build -x test 입력
 3. cd build, dir libs 입력하여 jar 파일 이름 확인
 4. cd libs 입력 후 java -jar 파일 이름 입력   
-
-![image](https://github.com/skcy1515/Programming-Study/assets/140364849/c291202d-de0b-4c36-8629-ad41467f49e7)
