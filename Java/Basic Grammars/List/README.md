@@ -8,6 +8,7 @@ list 선언
 List list = new ArrayList();
 ```
 실행 코드
+[ListMain.java](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/List/ListMain.java)
 ```
 package list;
 
@@ -69,7 +70,7 @@ String two = pitches.get(1);  // 형 변환이 필요없다.
 반대로 제네릭스를 사용하면 형변환이 필요 없다.
 
 ### 다양한 방법으로 ArrayList 만들기
-
+[ListGenericsMain.java](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/List/ListGenericsMain.java)
 ```
 package list;
 
