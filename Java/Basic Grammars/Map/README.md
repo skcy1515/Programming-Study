@@ -34,7 +34,7 @@ Map<String, Integer> map = new HashMap<>();
 - Map이 인터 페이스이기 때문에 자식인 HashMap으로 객체를 생성
 - 해시맵은 키-값 쌍의 데이터를 저장하는 자료구조로, 특정 키를 사용하여 해당 키에 대응하는 값을 빠르게 검색할 수 있다.
 
-[MapMain.java]
+[MapMain.java](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Map/MapMain.java)
 ```
 package store;
 
