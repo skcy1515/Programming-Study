@@ -8,7 +8,7 @@ Optional 객체를 생성하려면, of(), ofNullable() 등의 정적 팩토리 �
 ### Optional 객체에 접근
 get() 메소드를 사용하면 Optional 객체에 저장된 값에 접근할 수 있다. 만약 Optional 객체에 저장된 값이 null이면, NoSuchElementException 예외가 발생한다. 따라서 get() 메소드를 호출하기 전에 isPresent() 메소드를 사용하여 Optional 객체에 저장된 값이 null인지 아닌지를 먼저 확인한 후 호출하는 것이 좋다.
 
-[OptionalMain]
+[OptionalMain](https://github.com/skcy1515/Programming-Study/blob/main/Java/Basic%20Grammars/Optional/OptionalMain.java)
 ```
 package optional;
 
