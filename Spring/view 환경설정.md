@@ -1,7 +1,7 @@
 # Welcome page 만들기
 스프링 부트가 제공하는 Welcome page 기능, static/index.html을 올려두면 Welcome page 기능을 제공한다.
 
-`index.html`
+[index.html](https://github.com/skcy1515/Programming-Study/blob/main/Spring/hello-spring/src/main/resources/static/index.html)
 ```
 <!DOCTYPE HTML>
 <html>
@@ -19,7 +19,7 @@ Hello
 # Controller 만들기
 hello.hellospring/controller/HelloController.java 생성
 
-`HelloController.java`
+[HelloController.java](https://github.com/skcy1515/Programming-Study/blob/main/Spring/hello-spring/src/main/java/hello/hellospring/controller/HelloController.java)
 ```
 @Controller
 public class HelloController {
@@ -41,7 +41,7 @@ public class HelloController {
 
 resources/templates/hello.html 생성
 
-`hello.html`
+[hello.html](https://github.com/skcy1515/Programming-Study/blob/main/Spring/hello-spring/src/main/resources/templates/hello.html)
 ```
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
