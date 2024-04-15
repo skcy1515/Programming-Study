@@ -1,14 +1,14 @@
 # ALU
 CPU 내부에는 ALU와 제어장치 그리고 여러 개의 레지스터가 있다. `ALU(arithmetic and logical unit, 산술 논리 연산 장치)`는 계산을 담당하고, `제어장치`는 명령어를 읽어 들이고 해석한다. 레지스터는 CPU 안에 있는 작은 임시 저장장치이다.
 
-![1](https://github.com/skcy1515/Programming-Study/assets/140364849/77ed6d00-8562-491a-b939-e90ad6bb7e49)
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/8598cfbd-7e10-4fb6-ace8-09003cf90039)
 
 ALU는 레지스터를 통해 피연산자를 받아들이고, 제어장치로부터 수행할 연산을 알려주는 제어 신호를 받아들인다. ALU는 레지스터와 제어장치로부터 받아들인 피연산자와 제어 신호로 산술 연산, 논리 연산 등 다양한 연산을 수행한다. 연산을 수행한 결과는 특정 숫자나 문자가 될 수 있고, 메모리 주소가 될 수 있다. 이러한 결괏값은 바로 메모리에 저장되지 않고, 일시적으로 레지스터에 저장된다.
 
 ### 플래그
 ALU는 계산 결과와 더불어 플래그를 내보낸다. 이전에 이진수가 양수인지 음수인지 판별할 때 플래그가 이용된다고 언급한 적 있다. 이러한 연산 결과에 대한 추가적인 상태 정보를 플래그(flag)라고 한다. ALU가 내보내는 대표적인 플래그는 아래와 같다.
 
-![2](https://github.com/skcy1515/Programming-Study/assets/140364849/84205d58-0b9a-4bcf-9b8f-409e432a841c)
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/076286e1-312e-4c3b-9f7a-55f23413b690)
 
 플래그들은 플래그 레지스터라는 레지스터에 저장된다.
 
@@ -16,7 +16,7 @@ ALU는 계산 결과와 더불어 플래그를 내보낸다. 이전에 이진수
 - 제어장치 : 제어 신호를 내보내고, 명령어를 해석하는 부품
 - 제어신호 : 컴퓨터 부품들을 관리하고 작동시키기 위한 일종의 전기 신호
 
- ![3](https://github.com/skcy1515/Programming-Study/assets/140364849/3cfb7dcb-99f4-48ca-b150-bb4a7106e93e)
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/4b107b75-0199-4cf6-a311-71998dbfdf20)
 
 ### 제어장치가 받아들이는 정보
 - 제어장치는 클럭 신호를 받아들인다.
