@@ -9,6 +9,14 @@
 - 느린 사용자 경험
 
 ### 캐시 적용
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/4d764343-2a80-46ab-b7c7-21a088242cee)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/a21d48e1-8269-4ff2-9325-0c1f9ee2d664)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/fe354882-c7b6-49ed-b9a5-b91360725d79)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/3bd32798-fc95-4487-bd52-2db0738c8c7a)
+
 ```
 HTTP/1.1 200 OK
 Content-Type: image/jpeg
@@ -38,6 +46,16 @@ slkjdfl;qkawj9;o4ruawsldkal;skdjfa;ow9ejkl3123123
 - 캐시 만료후에도 서버에서 데이터를 변경하지 않음
 - 생각해보면 데이터를 전송하는 대신에 저장해 두었던 캐시를 재사용 할 수 있다.
 - 단 클라이언트의 데이터와 서버의 데이터가 같다는 사실을 확인할 수 있는 방법 필요
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/790c6219-735d-42f2-9361-e7ef7960b006)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/bbbf1f67-2ebe-42ef-ae79-08d27306844f)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/571ba727-a5a9-4385-9ba8-2d38f78a902a)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/6991bfd2-188a-4983-96e2-7426b1de3722)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/3594885b-5ccc-4fe4-aef4-22e6320d8236)
 
 ```
 HTTP/1.1 200 OK
@@ -110,6 +128,12 @@ Content-Length: 34012
 - 진짜 단순하게 ETag만 보내서 같으면 유지, 다르면 다시 받기!
 - 캐시 제어 로직을 서버에서 완전히 관리
 
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/d1105dd2-88da-4088-8f61-52d0096491cf)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/ba20d95b-fc4a-4087-a6d6-91100cb00393)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/14914b7d-074d-4dee-9963-a153ec0fdb9e)
+
 응답 메시지
 ```
 HTTP/1.1 200 OK
@@ -154,6 +178,8 @@ If-None-Match: "aaaaaaaaaa"
 - Cache-Control: max-age와 함께 사용하면 Expires는 무시
 
 # 프록시 캐시
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/f5703725-7aa9-4747-9893-8c55b82b2485)
+
 클라이언트와 원격 서버 사이에 위치한 중간 서버에 응답을 캐시하는 메커니즘이다.
 
 한국의 여러 클라이언트가 미국에 있는 서버에 접근한다고 가정하자. (실제 자원이 있는 서버: origin 서버) 웹 브라우저의 요청이 미국에 있는 서버까지 도달하기 위해서는 상당한 시간이 소요된다. (0.5초라고 가정하자.) 그러면 모든 웹 브라우저는 이미지를 내려받기 위해서 그 시간만큼 기다려야 한다. 그래서 프록시 캐시라는 캐시 서버를 도입한다.
@@ -185,6 +211,8 @@ If-None-Match: "aaaaaaaaaa"
   - HTTP 1.0 하위 호환
 
 ### no-cache 기본 동작
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/61268191-ecf1-4be6-811c-a44334fa5f23)
+
 1. 캐시 서버 요청 (웹 브라우저 -> 프록시 서버): no-cache + ETag
 2. 원 서버 요청 (프록시 서버 -> 원 서버): no-cache + ETag
 3. 원 서버 검증
@@ -194,5 +222,7 @@ If-None-Match: "aaaaaaaaaa"
 
 만약 원 서버에 접근할 수 없는 경우 캐시 서버 설정에 따라서 캐시 데이터를 반환할 수 있음
 Error or 200 OK (오류 보다는 오래된 데이터라도 보여주자)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/619b2f6b-e3db-419e-a3c0-e258338ef6f9)
 
 반면 must-revalidate라면 원 서버에 접근할 수 없는 경우, 항상 오류가 발생해야 함, 504 Gateway Timeout (매우 중요한 돈과 관련된 결과로 생각해보자)
