@@ -24,4 +24,5 @@
 3
 프로그램을 종료합니다.
 ```
+[다마고치 게임 구현 예제](https://github.com/skcy1515/Programming-Study/tree/main/Java/Ex%20Codes/TamagotchiGame)
 
