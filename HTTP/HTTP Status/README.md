@@ -1,3 +1,5 @@
+이 글은 인프런 김영한님의 `모든 개발자를 위한 HTTP 웹 기본 지식` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
+
 # HTTP 상태 코드
 클라이언트가 보낸 요청의 처리 상태를 응답에서 알려주는 기능
 
@@ -20,6 +22,8 @@
 
 웹 브라우저는 3xx 응답의 결과에 Location 헤더가 있으면, Location 위치로 자동 이동 (리다이렉트)
 
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/fad679dc-cd12-4e59-8f8f-b3554f9485b5)
+
 ### 리다이렉션 종류
 - 영구 리다이렉션: 특정 리소스의 URI가 영구적으로 이동
   - 예: /members -> /users
@@ -34,9 +38,14 @@
 - 원래의 URL를 사용X, 검색 엔진 등에서도 변경 인지
 - **301 Moved Permanently**
   - 리다이렉트시 요청 메서드가 GET으로 변하고, 본문이 제거될 수 있음(MAY)
+    
+    ![image](https://github.com/skcy1515/Programming-Study/assets/140364849/b56fe064-a687-4853-8f37-cb0a22059bac)
+
 - **308 Permanent Redirect**
   - 301과 기능은 같음
   - 리다이렉트시 요청 메서드와 본문 유지(처음 POST를 보내면 리다이렉트도 POST 유지)
+
+    ![image](https://github.com/skcy1515/Programming-Study/assets/140364849/87aee8c8-da17-4c42-86d9-a7adf2fb3d65)
 
 ### 리다이렉션 301
 
@@ -99,6 +108,8 @@ name=hello&age=20
 - 중복 주문이 될 수 있다.
 
 ### 일시 리다이렉션 - 예시
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/40461238-812e-4142-b6fd-0ce3b9e57e25)
+
 1. 요청
 ```
 POST /order HTTP/1.1
