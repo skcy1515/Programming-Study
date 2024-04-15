@@ -127,6 +127,8 @@ UDP는 주로 실시간 통신이나 비교적 신뢰성이 중요하지 않은 
 예를 들어, 빠른 전송 속도가 더 중요하며, 손실이나 지연이 발생해도 큰 문제가 되지 않는 음성 통화나 동영상 스트리밍, 온라인 게임 등이 있다.
 
 # DNS
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/44859cc5-a5c3-47bc-b2ed-426ba7f184e7)
+
 도메인 네임 시스템 (Domain Name System)은 인터넷에서 도메인 이름과 IP 주소를 변환하는 데 사용되는 시스템이다.
 
 (도메인: 인터넷 사이트 주소, ex) naver, google)
