@@ -1,3 +1,5 @@
+이 글은 인프런 강민철님의 `개발자를 위한 컴퓨터공학 1: 혼자 공부하는 컴퓨터구조 + 운영체제` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
+
 # 컴퓨터 구조
 ![image](https://github.com/skcy1515/Programming-Study/assets/140364849/e0d0af73-4def-4785-933d-dc4fb59b1bfc)
 
