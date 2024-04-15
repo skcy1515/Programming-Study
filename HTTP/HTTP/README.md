@@ -1,3 +1,5 @@
+이 글은 인프런 김영한님의 `모든 개발자를 위한 HTTP 웹 기본 지식` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
+
 # HTTP
 HTTP (Hyper Text Transfer Protocol) 인터넷에서 데이터를 주고받는 데 사용되는 프로토콜이다.
 
@@ -29,6 +31,8 @@ HTTP가 전송하는 것들에는 다음과 같은 것들이 있다.
    - 지금은 `HTTP 지속 연결` (클라이언트와 서버 간의 여러 HTTP 요청과 응답을 하나의 TCP 연결을 통해 처리하는 기술)로 문제 해결 -> 연결, HTML 응답, 자바스크립트 응답, 이미지 응답, 종료 총 0.5초, 또한 HTML 2, 3으로 발전하면서 더 많은 최적화가 이루어지고 있음
   
 # HTTP 메시지
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/a82d5602-6204-4e45-8bab-3c7ce0fa7583)
+
 HTTP 메시지 구조는 다음과 같이 이루어져 있다.
 - start-line 시작 라인
 - header 헤더
@@ -57,6 +61,9 @@ Content-Length: 3423 message body
 시작 라인은 요청 메시지(Request-Line)와 응답 메시지(Status-Line)으로 나누어져 있다.
 
 `요청 메시지 (Request-Line)` = method SP(공백) request-target SP HTTP-version CRLF(엔터)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/6dc518e8-916f-482b-9588-61d66bcdd430)
+
 ```
 GET /search?q=hello&hl=ko HTTP/1.1
 ```
@@ -65,6 +72,9 @@ GET /search?q=hello&hl=ko HTTP/1.1
 - HTTP Version
 
 `응답 메시지 (Status-Line)` = HTTP-version SP status-code SP reason-phrase CRLF
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/fcd48baf-70d2-4f3e-a95a-b265c8d56f6b)
+
 ```
 HTTP/1.1 200 OK
 ```
@@ -76,6 +86,8 @@ HTTP/1.1 200 OK
 - 이유 문구: 사람이 이해할 수 있는 짧은 상태 코드 설명 글
 
 ### 헤더
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/0a9f280e-08b3-45b0-91e7-ac1a08e5385b)
+
 HTTP 전송에 필요한 모든 부가정보
 - ex) 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트(브라우저) 정보, 서버 애플리케이션 정보, 캐시 관리 정보...
 ```
@@ -88,6 +100,8 @@ Content-Length: 3423 message body
 ```
 
 ### 메시지 바디
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/41bff80a-da8b-43b3-be5d-387e84120032)
+
 용도
 - 실제 전송할 데이터
 - HTML 문서, 이미지, 영상, JSON 등등 byte로 표현할 수 있는 모든 데이터 전송 가능
