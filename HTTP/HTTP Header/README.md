@@ -1,4 +1,8 @@
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/ae34709a-8502-41f4-bfbb-6b9cfc88774a)이 글은 인프런 김영한님의 `모든 개발자를 위한 HTTP 웹 기본 지식` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
+
 # HTTP 헤더 개요
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/170fabcd-dd58-4f3f-a42b-7d28f16fdf35)
+
 header-field = field-name ":" OWS field-value OWS (OWS:띄어쓰기 허용)
 
 예시
@@ -15,6 +19,8 @@ HTTP 전송에 필요한 모든 부가정보
 - 예) 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트, 서버 정보, 캐시 관리 정보...
 
 # HTTP 분류 - RFC2616(과거)
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/02cdba46-17ce-4fa8-acc0-77e0701fd891)
+
 엔티티 헤더
 ```
 Content-Type: text/html;charset=UTF-8
@@ -34,6 +40,8 @@ Content-Length: 3423
 그러나 RFC2616은 폐기되고 2014년 RFC7230~7235 등장
 
 # HTTP 분류 - RFC723X 
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/de31877c-ab6e-4f65-bab3-6e7b469a4959)
+
 - 엔티티(Entity) -> 표현(Representation)
 - 표현 = 표현 메타데이터 + 표현 데이터
 
@@ -67,6 +75,8 @@ Content-Length: 3423
 - 표현 헤더는 전송, 응답 둘다 사용
 
 ### Content-Type
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/bff44815-25da-4325-8759-2bfa44ada878)
+
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -81,6 +91,8 @@ Content-Length: 16
   - image/png
  
 ### Content-Encoding
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/2262b8ea-323f-42a1-8609-f5648d1e0265)
+
 ```
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=UTF-8
@@ -99,6 +111,8 @@ ko98udjkl
   - identity
 
 ### Content-Language
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/8ce1a797-dae1-4210-a8b8-5da4fa6934c2)
+
 ```
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=UTF-8
@@ -116,6 +130,8 @@ Content-Length: 521
   - en-US
  
 ### Content-Length
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/3610e284-5f31-42bd-b2fc-859f3cf30002)
+
 - 바이트 단위
 - Transfer-Encoding(전송 코딩)을 사용하면 Content-Length를 사용하면 안됨
 
@@ -128,6 +144,8 @@ Content-Length: 521
 - 협상 헤더는 요청시에만 사용
 
 ### 협상과 우선 순위
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/0e950438-61aa-4c40-8c73-a98b113c7d7c)
+
 ```
 GET /event
 Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
@@ -135,6 +153,8 @@ Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
 - Quality Values(q) 값 사용
 - 0~1, 클수록 높은 우선순위
 - 생략하면 1
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/6629c3fb-0a95-407d-8347-ceee53d3ac78)
 
 한국어 브라우저 사용 클라이언트가 요청
 ```
@@ -149,7 +169,10 @@ Hello (영어)
 ```
 우선순위 덕분에 독일어가 아닌 영어가 나오게 출력할 수 있음
 
+
 ### 협상과 우선 순위2
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/affe16c4-5c41-4ac2-9f9b-e9fbcf45331a)
+
 ```
 GET /event
 Accept: text/*, text/plain, text/plain;format=flowed, */*
@@ -168,6 +191,8 @@ Accept: text/*, text/plain, text/plain;format=flowed, */*
 - 범위 전송
 
 ### 단순 전송
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/38af7e3f-6b30-4423-a9b2-adc4bc9bafee)
+
 Content-Length
 ```
 HTTP/1.1 200 OK
@@ -180,6 +205,8 @@ Content-Length: 3423
 ```
 
 ### 압축 전송
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/8772b652-f377-4114-bf0a-4f66c43db26e)
+
 Content-Encoding
 
 서버에서 압축을 통해 용량을 줄여서 전하는 방법이다.
@@ -193,6 +220,9 @@ lkj123kljoiasudlkjaweioluywlnfdo912u34ljko98udjkl
 ```
 
 ### 분할 전송
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/23bc60f7-89e3-4ee7-9c77-2ba78dd4ae1a)
+
 Transfer-Encoding
 
 덩어리로 나눠서 보내는 방식 하나하나씩 묶어서 보낸다. 용량이 큰것을 한번에 보내면 기다려야 하는데 분할해서 전송하면 오는대로 바로바로 볼 수 있다.
@@ -210,6 +240,8 @@ World
 ```
 
 ### 범위 전송
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/05c695f7-9723-4cfa-a94d-d201a8ab60fa)
+
 Range, Content-Range
 
 이미지를 받는데 중간에 절반정도 받았다고 쳤을때 만약에 끊기면 다시 요청해야 한다. 그러면 아까우니까 범위를 지정해서 어느정도 받고 또 받는다.
@@ -277,6 +309,8 @@ user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/
 - Retry-After: 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
 
 ### Host
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/8ef7a7d1-d5fb-46af-900e-627dd0b685c6)
+
 요청한 호스트 정보(도메인)
 ```
 GET /search?q=hello&hl=ko HTTP/1.1
@@ -333,9 +367,11 @@ HTTP는 무상태(Stateless) 프로토콜이다.
 - 클라이언트가 다시 요청하면 서버는 이전 요청을 기억하지 못한다.
 - 클라이언트와 서버는 서로 상태를 유지하지 않는다.
 
- ### 쿠키 미사용
- 모든 요청에 사용자 정보 포함
- ```
+### 쿠키 미사용
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/6c249f99-d990-4570-b4ce-5dc644aac793)
+
+모든 요청에 사용자 정보 포함
+```
 GET /welcome?user=홍길동 HTTP/1.1
 GET /board?user=홍길동 HTTP/1.1
 GET /order?user=홍길동 HTTP/1.1
@@ -343,6 +379,12 @@ GET /xxx...?user=홍길동 HTTP/1.1
 ```
 
 ### 쿠키 사용
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/b67468fd-a1e6-470d-9e46-238638d9af24)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/a83b6c04-25d4-45f9-87bb-928ce08e4600)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/b3e0a597-516a-45d8-831e-e2f043033204)
+
 로그인
 ```
 POST /login HTTP/1.1
