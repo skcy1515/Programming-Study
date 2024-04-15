@@ -1,3 +1,5 @@
+이 글은 인프런 김영한님의 `모든 개발자를 위한 HTTP 웹 기본 지식` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
+
 # 클라이언트에서 서버로 데이터 전송
 데이터 전달 방식은 크게 2가지가 있다.
 1. 쿼리 파라미터를 통한 데이터 전송
@@ -20,6 +22,8 @@
    - 서버 to 서버, 앱 클라이언트, 웹 클라이언트(Ajax)
 
 ### 정적 데이터 조회
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/e091a60e-30c0-4166-b4dd-377c18907d24)
+
 쿼리 파라미터를 사용하지 않는다.
 
 요청 메시지
@@ -43,6 +47,8 @@ slkjdfl;qkawj9;o4ruawsldkal;skdjfa;ow9ejkl3123123
 - 정적 데이터는 일반적으로 쿼리 파라미터 없이 리소스 경로로 단순하게 조회 가능
 
 ### 동적 데이터 조회
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/a0af64b3-7187-4cb3-a476-42628b280dad)
+
 ```
 GET /search?q=hello&hl=ko HTTP/1.1
 Host: www.google.com
@@ -57,6 +63,8 @@ Host: www.google.com
 - GET은 쿼리 파라미터 사용해서 데이터를 전달
 
 ### HTML Form 데이터 전송
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/56971534-19d9-4d6e-86cd-6f41c89db270)
+
 사용자가 form에 입력한 값을 바탕으로 POST 전송 - 저장
 
 폼 입력
@@ -75,6 +83,8 @@ Content-Type: application/x-www-form-urlencoded
 
 username=kim&age=20
 ```
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/0676b0da-f89b-485a-9101-572a642b9ae3)
+
 multipart/form-data 폼 입력 (파일 업로드 시)
 ```
 <form action="/save" method="post" enctype="multipart/form-data">
@@ -121,6 +131,8 @@ Content-Type: image/png
 - 참고: HTML Form 전송은 GET, POST만 지원
 
 ### HTTP API 데이터 전송
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/5c63380f-be29-434c-8959-18d83f3132ca)
+
 (API는 Application Programming Interface의 약자로, 프로그램 간에 정보를 주고받거나 서로 소통할 수 있는 방법을 제공하는 도구나 규칙 간단히 말해, API는 다른 소프트웨어 프로그램이 서로 상호작용할 수 있도록 해주는 일종의 '연결 도로')
 
 요청 메시지
