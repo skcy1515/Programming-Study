@@ -1,4 +1,6 @@
 # 컴퓨터 구조
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/e0d0af73-4def-4785-933d-dc4fb59b1bfc)
+
 컴퓨터 구조를 알면, 프로그래밍 언어의 문법만으로는 알기 어려운 성능, 용량, 비용을 고려하며 개발할 수 있다.
 ### 1. 컴퓨터가 이해하는 정보
    
@@ -10,6 +12,8 @@
    + `보조기억장치`
    + `입출력장치`
 
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/52ed08d4-8142-4302-ab05-6f22b01c03b7)
+
 ### CPU
 CPU는 메모리에 저장된 명령어를 읽어 들이고, 해석하고, 실행하는 부품이다.
 
@@ -19,11 +23,27 @@ CPU의 내부 구성 부품은 `ALU` , `제어장치` , `레지스터`가 있다
 3. `레지스터` : CPU 내부에서 처리할 명령어나 연산의 중간 결과값 등을 일시적으로 기억하는 임시 기억장소이다. 메모리 중에서 가장 빠른 속도를 가진다.
 
 ### 메모리 (주기억장치)
-프로그램이 실행되기 위해서는 메모리에 저장되어 있어야 한다. 메모리는 실행되는 프로그램의 명령어와 데이터를 일시적으로 저장한다.
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/ab73b08c-3b5f-400f-8d2e-a232909e7a65)
+
+프로그램이 실행되기 위해서는 메모리에 저장되어 있어야 한다. 메모리는 실행되는 프로그램의 명령어와 데이터를 일시적으로 저장한다. 휘발성 저장장치라는 점에서 보조기억장치와 대비된다. 보조기억장치에서 CPU로 바로 데이터를 상호작용하는 것은 속도가 매우 느리고, 비효율적이어서, 중간 연결다리 역할을 메모리가 한다. 그리하여 주기억장치를 메모리라고 한다.
+
+(휘발성 저장장치는 전원 공급이 중단되면 저장되어 있던 데이터가 모두 소멸되는 것을 말한다. 반대로 비휘발성 저장장치는 전원 공급이 중단되어도 데이터가 소멸되지 않는다.)
 
 주기억장치엔 `RAM(Random Access Memory)`과 `ROM(Read Only Memory)` 두 가지가 있다.
 
 메모리에 저장된 값의 위치는 주소로 알 수 있다.
+
+### CPU와 메모리 동작 과정
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/51d0a159-699a-4d18-a43e-fee496c33b23)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/63f2b172-7aa2-4bdb-9ccf-fe882981791e)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/805559ff-44fd-4815-b9f8-3ed9f98dbb40)
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/98ad5f50-81b7-4767-b8e0-90f1112a61ae)
+
+
+
 
 ### 보조기억장치
 하드디스크 등을 말하며, 주기억장치에 비해 속도는 느리지만 많은 자료를 영구적으로 보관할 수 있는 장점이 있다. 
@@ -49,5 +69,14 @@ CPU의 내부 구성 부품은 `ALU` , `제어장치` , `레지스터`가 있다
 1. `데이터 버스` : CPU와 메모리간에 데이터를 전달하는 통로
 2. `주소 버스` : CPU가 메모리에 데이터를 읽거나 쓸 때 사용하는 부분, CPU는 메모리 주소를 주소 버스에 보내어 특정 위치에 데이터를 읽거나 쓴다.
 3. `제어 버스` :  데이터 버스와 주소 버스를 제어하기 위해 제어 신호들을 전송하는 통로
+
+메모리 값 읽기
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/1134d91a-5035-4ded-8b0b-cb878b28de8e)
+
+메모리 값 쓰기
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/c8c23e96-baa2-44e4-b2ce-2e905b33daf0)
+
 
 
