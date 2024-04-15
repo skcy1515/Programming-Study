@@ -1,4 +1,4 @@
-![image](https://github.com/skcy1515/Programming-Study/assets/140364849/ae34709a-8502-41f4-bfbb-6b9cfc88774a)이 글은 인프런 김영한님의 `모든 개발자를 위한 HTTP 웹 기본 지식` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
+이 글은 인프런 김영한님의 `모든 개발자를 위한 HTTP 웹 기본 지식` 강의를 바탕으로 개인적인 정리를 위해 작성한 글입니다.
 
 # HTTP 헤더 개요
 ![image](https://github.com/skcy1515/Programming-Study/assets/140364849/170fabcd-dd58-4f3f-a42b-7d28f16fdf35)
