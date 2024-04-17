@@ -1,12 +1,5 @@
-# 자바 문제 모음
+# 자바 연습 코드 모음
 
-[2차원 배열 랜덤 숫자 임의 삽입](https://github.com/skcy1515/Programming-Study/blob/main/Java/Ex%20Codes/Main1.java)
-```
-5 0 8 6
-0 7 9 5
-2 4 0 8
-0 0 0 8
-```
 [스케줄 관리 프로그램 예제 (클래스 객체 배열 사용)](https://github.com/skcy1515/Programming-Study/tree/main/Java/Ex%20Codes/day)
 ```
 이번달 스케줄 관리 프로그램
