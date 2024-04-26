@@ -53,3 +53,22 @@ FIFO 알고리즘에서 Burst Time이 짧은게 먼저 실행되면 평균 대�
 - Burst Time이 긴 프로세스는 아주 오랫동안 실행되지 않을 수 있음
 
 이러한 문제점 때문에 SJF 알고리즘은 사용되지 않는다.
+
+# RR (Round Robin)
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/1ebe5cff-63e1-4b29-afee-ca0e23c75776)
+
+한 프로세스에게 일정 시간만큼 CPU를 할당하고 할당된 시간이 지나면 강제로 다른 프로세스에게 일정시간만큼 CPU를 할당하고 강제로 CPU를 뺏긴 프로세스는 큐의 가장 뒷부분으로 밀려나게 하는 알고리즘
+
+프로세스에게 할당하는 일정 시간은 타임 슬라이스 또는 타임 퀀텀이라고 부른다.
+
+RR 알고리즘 성능
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/b4a3d3d0-8445-479d-89eb-b47d1bc48396)
+
+FIFO 알고리즘 성능
+
+![image](https://github.com/skcy1515/Programming-Study/assets/140364849/a1c31b58-7d2e-49c0-a47f-cf006896a3c4)
+
+RR 알고리즘과 FIFO 알고리즘의 평균 대기 시간이 비슷하다면 RR 알고리즘은 비효율적 (컨텍스트 스위칭이 있기 때문에 시간이 더 추가됨)
+
+RR 알고리즘의 성능은 타임 슬라이스의 값에 따라 크게 달라진다. 타임슬라이스가 너무 크면 동작 과정이 끊기는 것처럼 느껴질 수 있고 타임슬라이스가 너무 작아도 컨텍스트 스위칭이 자주 일어나서 오버헤드가 커지므로 20ms ~ 100ms가 적당
