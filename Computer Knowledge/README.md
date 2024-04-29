@@ -27,6 +27,25 @@
   - 컴퓨터 하드웨어와 구조
   - 컴퓨터 부팅 과정
   - 인터럽트
+- [프로세스와 스레드](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/process%20and%20thread)
+  - 프로세스
+  - 멀티프로그래밍과 멀티프로세싱
+  - PCB
+  - 컨텍스트 스위칭
+  - 쓰레드
+- [CPU 스케줄링](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/CPU%20Scheduling)
+  - CPU 스케줄링
+  - 다중큐
+  - 스케줄링 목표
+  - FIFO
+  - SJF
+  - RR
+  - MLFQ
+- [프로세스 동기화](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Process%20Synchronization)
+  - 프로세스 간 통신
+  - 공유자원과 임계구역
+  - 세마포어
+  - 모니터
 
 # 자료구조와 알고리즘
 - 자료구조
