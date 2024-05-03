@@ -2,6 +2,8 @@
 
 # 컴퓨터 구조
 - [컴퓨터 구조](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Computer%20Structure)
+  - 컴퓨터가 이해하는 정보
+  - 컴퓨터의 4가지 핵심 부품
 - [데이터](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Computer%20Structure/Data)
 - [소스코드와 명령어](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Computer%20Structure/Source%20code%20and%20Command)
 
@@ -14,12 +16,31 @@
   - DNS
 - [URI와 웹 브라우저 요청 흐름](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/URI)
 - [HTTP](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/HTTP)
+  - HTTP
+  - HTTP 메시지
 - [HTTP 메서드](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/HTTP%20Method)
   - GET, POST, PUT, PATCH, DELETE
 - [HTTP 메서드 활용과 HTTP API 설계 예시](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/HTTP%20Method%20Uses)
 - [HTTP 상태코드](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/HTTP%20Status)
+  - 1XX
+  - 2XX
+  - 3XX
+  - 리다이렉션 종류
+  - 4XX
+  - 5XX
 - [HTTP 헤더](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/HTTP%20Header)
+  - 표현
+  - 협상
+  - 전송 방식
+  - 일반 정보
+  - 특별한 정보
+  - 인증
+  - 쿠키
 - [캐시와 조건부 요청](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/Cache)
+  - 검증 헤더와 조건부 요청
+  - 캐시 제어 헤더
+  - 프록시 캐시
+  - 캐시 무효화
 
 # 운영체제
 - [운영체제의 개요](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System)
@@ -46,6 +67,11 @@
   - 공유자원과 임계구역
   - 세마포어
   - 모니터
+- [데드락](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Deadlock)
+  - 교착상태 회피
+  - 교착상태 검출 방법
+- [컴파일과 프로세스](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Compile%20and%20Process)
+- [메모리](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Memory)
 
 # 자료구조와 알고리즘
 - 자료구조
