@@ -190,8 +190,39 @@ export { Node, DoublyLinkedList };
 # 큐 구현 예제
 이중 연결리스트를 기반으로 큐 구현, 구현 전에 에 필요한 추상 자료형 정의
 
-enqueue - 큐에 삽입
-dequeue - 큐 요소 삭제
-front - 가장 먼저 들어간 데이터 참조 (tail)
-isEmpty - 비었는지 확인
+- enqueue: 큐에 삽입
+- dequeue: 큐 요소 삭제
+- front: 가장 먼저 들어간 데이터 참조 (tail)
+- isEmpty: 비었는지 확인
 
+```
+import { DoublyLinkedList } from "./DoublyLinkedList.mjs";
+
+class Queue{
+    constructor(){
+        this.list = new DoublyLinkedList();
+    }
+
+    enqueue(data){ // 데이터 앞 부분에 삽입
+        this.list.insertAt(0, data);
+    }
+
+    dequeue(){ // 가장 마지막 데이터 삭제
+        try{
+            return this.list.deleteLast();
+        } catch(e){
+            return null;
+        }
+    }
+
+    front(){ 
+        return this.list.tail;
+    }
+
+    isEmpty(){
+        return (this.list.count == 0);
+    }
+}
+
+export {Queue};
+```
