@@ -72,10 +72,14 @@
   - 교착상태 검출 방법
 - [컴파일과 프로세스](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Compile%20and%20Process)
 - [메모리](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Memory)
+  - 물리 주소와 논리 주소
+  - 메모리 할당 방식
+- [가상 메모리](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Virtual%20Memory)
 
 # 자료구조와 알고리즘
 - 자료구조
   - [배열](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Data-Structure%20%26%20Algorithm/Data%20Structure/Array)
   - [연결 리스트](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Data-Structure%20%26%20Algorithm/Data%20Structure/Linked%20list)
   - [스택](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Data-Structure%20%26%20Algorithm/Data%20Structure/Stack)
+  - [큐](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Data-Structure%20%26%20Algorithm/Data%20Structure/Queue)
 - 알고리즘
