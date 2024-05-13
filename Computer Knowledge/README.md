@@ -1,12 +1,5 @@
 컴퓨터와 관련된 지식들을 공부하면서 개인적으로 정리한 글입니다.
 
-# 컴퓨터 구조
-- [컴퓨터 구조](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Computer%20Structure)
-  - 컴퓨터가 이해하는 정보
-  - 컴퓨터의 4가지 핵심 부품
-- [데이터](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Computer%20Structure/Data)
-- [소스코드와 명령어](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Computer%20Structure/Source%20code%20and%20Command)
-
 # HTTP
 - [인터넷 네트워크](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/Internet%20Network)
   - 인터넷 통신
@@ -75,6 +68,11 @@
   - 물리 주소와 논리 주소
   - 메모리 할당 방식
 - [가상 메모리](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/Operating%20System/Virtual%20Memory)
+  - 세그멘테이션
+  - 페이징
+  - 페이지드 세그멘테이션
+  - 요구 페이징
+  - 쓰레싱과 워킹셋
 
 # 자료구조와 알고리즘
 - 자료구조
