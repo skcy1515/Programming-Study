@@ -70,3 +70,93 @@ doubleValue = 10.5
 제네릭의 핵심은 사용할 타입을 미리 결정하지 않는다는 점이다. 클래스 내부에서 사용하는 타입을 클래스를 정의하는 시점에 결정하는 것이 아니라 실제 사용하는 생성 시점에 타입을 결정하는 것이다.
 
 ### 제네릭 활용 예제 (객체를 보관할 수 있는 제네릭 클래스)
+```
+package generic.animal;
+
+public class Animal {
+    private String name;
+    private int size;
+
+    public Animal(String name, int size) {
+        this.name = name;
+        this.size = size;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void sound() {
+        System.out.println("동물 울음 소리");
+    }
+
+    @Override
+    public String toString() { // 객체를 문자열로 반환
+        return "동물{" + "이름= " + name + ", 크기= " + size + "}";
+    }
+}
+
+public class Cat extends Animal{
+    public Cat(String name, int size) {
+        super(name, size);
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("냐옹");
+    }
+}
+
+public class Dog extends Animal{
+    public Dog(String name, int size) {
+        super(name, size);
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("멍멍");
+    }
+}
+
+package generic.ex2;
+
+public class Box<T> {
+    private T value;
+
+    public void set(T value) {
+        this.value = value;
+    }
+
+    public T get() {
+        return value;
+    }
+}
+
+import generic.animal.Animal;
+import generic.animal.Cat;
+import generic.animal.Dog;
+
+public class main {
+    public static void main(String[] args) {
+        Animal animal = new Animal("동물", 0);
+        Dog dog = new Dog("멍멍이", 100);
+        Cat cat = new Cat("냐옹이", 60);
+
+        Box<Dog> dogBox = new Box<>();
+        dogBox.set(dog);
+        System.out.println("findDog = " + dogBox.get());
+
+        Box<Cat> catBox = new Box<>();
+        catBox.set(cat);
+        System.out.println("findCat = " + catBox.get());
+    }
+}
+```
+실행 결과
+```
+findDog = 동물{이름= 멍멍이, 크기= 100}
+findCat = 동물{이름= 냐옹이, 크기= 60}
+```
