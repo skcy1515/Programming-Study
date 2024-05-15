@@ -30,6 +30,7 @@ public class Shopping extends usable{
     private boolean buyFood(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("현재 돈: " + item.getMoney());
+        System.out.println("먹이 가격: " + item.getFoodPrice());
         System.out.println("몇 개를 구매하시나요? ");
         int count = scanner.nextInt();
 
@@ -42,6 +43,9 @@ public class Shopping extends usable{
             System.out.print("현재 먹이 개수: " + item.getFood());
             System.out.println(", 남은 돈: " + item.getMoney());
             tamagotchi.setTime(tamagotchi.getTime() + 1);
+            tamagotchi.setHunger(tamagotchi.getHunger() + 5);
+            tamagotchi.setHappiness(tamagotchi.getHappiness() - 3);
+            tamagotchi.setCleanLiness(tamagotchi.getCleanLiness() - 5);
             return true;
         }
     }
@@ -49,6 +53,7 @@ public class Shopping extends usable{
     private boolean buyShampoo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("현재 돈: " + item.getMoney());
+        System.out.println("샴푸 가격: " + item.getShampooPrice());
         System.out.println("몇 개를 구매하시나요? ");
         int count = scanner.nextInt();
 
@@ -61,6 +66,9 @@ public class Shopping extends usable{
             System.out.print("현재 샴푸 개수: " + item.getShampoo());
             System.out.println(", 남은 돈: " + item.getMoney());
             tamagotchi.setTime(tamagotchi.getTime() + 1);
+            tamagotchi.setHunger(tamagotchi.getHunger() + 5);
+            tamagotchi.setHappiness(tamagotchi.getHappiness() - 3);
+            tamagotchi.setCleanLiness(tamagotchi.getCleanLiness() - 5);
             return true;
         }
     }

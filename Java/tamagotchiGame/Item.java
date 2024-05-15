@@ -1,11 +1,11 @@
 package tamagotchiGame;
 
 public class Item {
-    private int food = 0;
-    private int shampoo = 0;
+    private int food = 5;
+    private int shampoo = 1;
     private int money = 0;
-    private final int foodPrice = 1;
-    private final int shampooPrice = 2;
+    private final int foodPrice = 1000;
+    private final int shampooPrice = 2000;
 
     public int getShampoo() {
         return shampoo;

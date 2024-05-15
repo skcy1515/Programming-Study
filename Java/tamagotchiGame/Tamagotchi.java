@@ -63,6 +63,14 @@ public class Tamagotchi {
         this.time = time;
     }
 
+    public int getGrowthLevel() {
+        return growthLevel;
+    }
+
+    public void setGrowthLevel(int growthLevel) {
+        this.growthLevel = growthLevel;
+    }
+
     public void printStatus(){
         System.out.println(name + "의 상태");
         System.out.println("--------------------");
