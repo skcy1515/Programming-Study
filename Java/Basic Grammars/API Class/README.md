@@ -71,3 +71,29 @@ String 인스턴스는 한 번 생성되면 그 값을 읽기만 할 수 있고,
         System.out.println(a.toUpperCase()); // 대문자로 변환하여 출력 (원본 문자열 변경 X), JAVA C++
         System.out.println(a.toLowerCase()); // 소문자로 변환하여 출력 (원본 문자열 변경 X), java c++
 ```
+
+# Wrapper 클래스
+프로그램에 따라 기본 타입의 데이터를 객체로 취급해야 하는 경우가 있다. 예를 들어, 메소드의 인수로 객체 타입만이 요구되면, 기본 타입의 데이터를 그대로 사용할 수는 없다. 이때에는 기본 타입의 데이터를 먼저 객체로 변환한 후 작업을 수행해야 한다.
+
+ 이렇게 8개의 기본 타입에 해당하는 데이터를 객체로 포장해 주는 클래스를 래퍼 클래스(Wrapper class)라고 한다. 래퍼 클래스는 각각의 타입에 해당하는 데이터를 인수로 전달받아, 해당 값을 가지는 객체로 만들어 준다.
+
+ ### 박싱(Boxing)과 언박싱(UnBoxing)
+- 박싱(boxing): 기본 타입의 값을 Wrapper 객체로 변환
+- 언박싱(unboxing): Wrapper 객체에 들어 있는 기본 타입의 값을 빼내는 것
+
+```
+        Integer num1 = new Integer(7); // 박싱
+        Integer num2 = new Integer(3); // 박싱
+
+        int int1 = num1.intValue();    // 언박싱
+        int int2 = num2.intValue();    // 언박싱
+```
+
+### 오토 박싱(AutoBoxing)과 오토 언박싱(AutoUnBoxing)
+JDK 1.5부터는 박싱과 언박싱이 필요한 상황에서 자바 컴파일러가 이를 자동으로 처리해 준다. 이렇게 자동화된 박싱과 언박싱을 오토 박싱(AutoBoxing)과 오토 언박싱(AutoUnBoxing)이라고 부른다.
+
+```
+        Character ch = 'X'; // Character ch = new Character('X'); : 오토박싱
+        char c = ch;        // char c = ch.charValue();           : 오토언박싱
+        System.out.println(c); // X
+```
