@@ -127,3 +127,22 @@ String 클래스의 인스턴스는 한 번 생성되면 그 값을 읽기만 �
         sb.setLength(4); // 스트링 버퍼 내 문자열 길이 수정
         System.out.println(sb); // This
 ```
+
+# Math 클래스
+```
+        double a = 3.5;
+
+        System.out.println(Math.PI); // 원주율 상수 출력, 3.14159...
+        System.out.println(Math.ceil(a)); // ceil(올림), 4.0
+        System.out.println(Math.floor(a)); // floor(내림), 3.0
+        System.out.println(Math.round(a)); // 소수점 첫째 자리 반올림 후 정수 반환, 4
+        System.out.println(Math.max(3.14, 3.14159)); // 더 큰 값 반환, 3.14159
+        System.out.println(Math.min(3.14, 3.14159)); // 더 작은 값 반환, 3.14
+        System.out.println((int)Math.pow(5, 2)); // 5^2, 25
+        System.out.println((int)Math.sqrt(25));  // 25의 제곱근, 5
+
+        // [1, 45] 사이의 정수형 난수 5개 발생
+        System.out.print("이번주 행운의 번호는 ");
+        for(int i=0; i<5; i++)
+            System.out.print((int)(Math.random()*45 + 1) + " ");
+```
