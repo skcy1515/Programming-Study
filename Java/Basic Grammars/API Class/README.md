@@ -97,3 +97,33 @@ JDK 1.5부터는 박싱과 언박싱이 필요한 상황에서 자바 컴파일�
         char c = ch;        // char c = ch.charValue();           : 오토언박싱
         System.out.println(c); // X
 ```
+
+# StringBuffer 클래스
+String 클래스의 인스턴스는 한 번 생성되면 그 값을 읽기만 할 수 있고, 변경할 수는 없다. 하지만 StringBuffer 클래스의 인스턴스는 그 값을 변경할 수도 있고, 추가할 수도 있다.
+
+이를 위해 StringBuffer 클래스는 내부적으로 버퍼(buffer)라고 하는 독립적인 공간을 가진다. 버퍼 크기의 기본값은 16개의 문자를 저장할 수 있는 크기이며, 생성자를 통해 그 크기를 별도로 설정할 수도 있다.
+
+주요 메서드들
+- append
+- insert
+- replace
+- delete
+- setLength
+
+```
+        StringBuffer sb = new StringBuffer("This");
+        sb.append(" is pencil"); // 문자열 덧붙이기
+        System.out.println(sb); // This is pencil
+
+        sb.insert(7, " my"); // "my" 문자열 삽입
+        System.out.println(sb); // This is my pencil
+
+        sb.replace(8, 10, "your"); // "my"를 "your"로 변경
+        System.out.println(sb); // This is your pencil
+
+        sb.delete(8, 13); // "your " 삭제
+        System.out.println(sb); // This is pencil
+
+        sb.setLength(4); // 스트링 버퍼 내 문자열 길이 수정
+        System.out.println(sb); // This
+```
