@@ -1,6 +1,7 @@
 # Stream API
 Stream API는 데이터를 처리하고 변환하는 데 사용할 수 있는 기능을 제공한다. 이 API를 사용하면 배열, 리스트, 맵 등의 컬렉션에서 데이터를 추출하고 필터링, 매핑, 집계 등 다양한 작업을 수행할 수 있다. 
 
+# Stream 생성
 ```
         // 콜렉션으로부터 생성
         List<String> list = new ArrayList<>(Arrays.asList("a", "b", "c"));
@@ -13,4 +14,14 @@ Stream API는 데이터를 처리하고 변환하는 데 사용할 수 있는 �
         // Stream.of 사용
         Stream<String> stream3 = Stream.of("g", "h", "i");
 
+```
+
+# Stream 중간 연산
+### filter()
+조건에 맞는 요소만 선택하여 Stream으로 반환한다.
+```
+        Stream<String> stream = Stream.of("apple", "banana", "cherry", "durian");
+        Stream<String> filteredStream = stream.filter(str -> str.length() > 5);
+
+        filteredStream.forEach(System.out::println); // banana cherry durian
 ```
