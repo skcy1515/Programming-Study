@@ -1,5 +1,3 @@
-컴퓨터와 관련된 지식들을 공부하면서 개인적으로 정리한 글입니다.
-
 # HTTP
 - [인터넷 네트워크](https://github.com/skcy1515/Programming-Study/tree/main/Computer%20Knowledge/HTTP/Internet%20Network)
   - 인터넷 통신
