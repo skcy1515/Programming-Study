@@ -114,3 +114,57 @@ Stream의 요소의 개수를 반환한다.
         System.out.println(result2); // true
 ```
 
+# Stream 활용 예제 모음
+```
+        // 짝수만 필터링
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> evenNumbers = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
+        evenNumbers.forEach(System.out::println); // 2, 4, 6, 8, 10
+
+        // 대문자로 변환
+        List<String> words = Arrays.asList("apple", "banana", "cherry");
+        List<String> upperCaseWords = words.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
+        upperCaseWords.forEach(System.out::println); // APPLE, BANANA, CHERRY
+
+        // 요소들의 합 출력
+        List<Integer> numbers2 = Arrays.asList(1, 2, 3, 4, 5);
+        int sum = numbers2.stream()
+                .reduce(0, Integer::sum);
+        System.out.println("Sum: " + sum); // Sum: 15
+
+        // 최댓값 찾기
+        List<Integer> numbers3 = Arrays.asList(3, 5, 2, 8, 1);
+        Optional<Integer> max = numbers3.stream()
+                .reduce(Integer::max);
+        max.ifPresent(value -> System.out.println("Max: " + value)); // Max: 8
+
+        // 리스트를 집합으로 만들기
+        List<String> words2 = Arrays.asList("apple", "banana", "cherry", "apple");
+        Set<String> wordSet = words2.stream()
+                .collect(Collectors.toSet());
+        wordSet.forEach(System.out::println); // apple, banana, cherry
+
+        // 정렬하기
+        List<Integer> numbers4 = Arrays.asList(5, 3, 8, 1, 2);
+        List<Integer> sortedNumbers = numbers4.stream()
+                .sorted()
+                .collect(Collectors.toList());
+        sortedNumbers.forEach(System.out::println); // 1, 2, 3, 5, 8
+
+        // 모든 숫자가 짝수인지 아닌지
+        List<Integer> numbers5 = Arrays.asList(2, 4, 6, 8, 10);
+        boolean allEven = numbers5.stream()
+                .allMatch(n -> n % 2 == 0);
+        System.out.println("All even: " + allEven); // All even: true
+
+
+        // 요소 수 세기
+        List<String> words3 = Arrays.asList("apple", "banana", "cherry");
+        long count = words3.stream()
+                .count();
+        System.out.println("Count: " + count); // Count: 3
+```
