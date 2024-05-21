@@ -43,7 +43,65 @@ public class UserController {
 ```
 또한 package com.group.libraryapp.dto.user 패키지 안에 userCreateRequest를 만들어 주었다.
 ```
-package com.group.libraryapp면, 요청 본문에 JSON 형식의 사용자 데이터를 포함한다. 여기서 @RequestBody 어노테이션은 HTTP 요청 본문을 Java 객체로 변환하는 역할을 한다. 여기서는 요청 본문의 JSON 데이터를 userCreateRequest 타입의 객체로 변환한다. 마지막으로 userCreateRequest 객체의 getName()과 getAge() 메서드를 호출하여 User 객체를 생성하고, 생성된 User 객체를 users 리스트에 추가한다.
+package com.group.libraryapp.dto.user;
+
+public class userCreateRequest {
+    private String name;
+    private Integer age;
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+}
+```
+
+### 기능 구현
+이제 뼈대를 잡았으니 실제 기능을 만들어야 한다. 원하는 것은 유저가 저장되는 것이다. 즉, 서버를 키고, API를 호출해 유저를 저장하면, 다시 불러올 수 있어야 한다. 가장 간단하게 API가 호출되면, User라는 클래스의 인스턴스를 만들고 이 데이터를 List에 저장하도록 하자. User 클래스는 새로 만들어야 한다. com.group.libraryapp 안에 domain.user 패키지를 만들어 User 클래스를 만들어준다.
+```
+package com.group.libraryapp.domain.user;
+
+public class User {
+    private String name;
+    private Integer age;
+
+    public User(String name, Integer age) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException(String.format("잘못된 name(%s)이 들어왔습니다", name));
+        }
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+name에는 null이 들어오면 안 되고, 이름이 비어 있을 수도 없으므로 생성자에서 값을 검증해주도록 했다.
+```
+package com.group.libraryapp.Controller.user;
+
+import com.group.libraryapp.domain.user.User;
+import com.group.libraryapp.dto.user.userCreateRequest;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
+public class UserController {
+
+    private final List<User> users = new ArrayList<>();
+
+    @PostMapping("/user")
+    public void saveUser(@RequestBody userCreateRequest request) {
+        users.add(new User(request.getName(), request.getAge()));
+    }
+}
+```
+이제 POST(저장) API에서 User 클래스를 List에 담도록 하였다. 클라이언트가 서버에 HTTP POST 요청을 보내면, 요청 본문에 JSON 형식의 사용자 데이터를 포함한다. 여기서 @RequestBody 어노테이션은 HTTP 요청 본문을 Java 객체로 변환하는 역할을 한다. 여기서는 요청 본문의 JSON 데이터를 userCreateRequest 타입의 객체로 변환한다. 마지막으로 userCreateRequest 객체의 getName()과 getAge() 메서드를 호출하여 User 객체를 생성하고, 생성된 User 객체를 users 리스트에 추가한다.
 
 # 스프링 MVC 구조와 DTO, 도메인 모델
 스프링 MVC는 애플리케이션을 세 가지 주요 구성 요소로 나눈다.
