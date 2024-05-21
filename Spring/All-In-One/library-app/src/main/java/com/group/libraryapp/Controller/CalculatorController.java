@@ -1,7 +1,7 @@
 package com.group.libraryapp.Controller;
 
-import com.group.libraryapp.CalculatorAddRequest;
-import com.group.libraryapp.CalculatorMultiplyRequest;
+import com.group.libraryapp.dto.controller.CalculatorAddRequest;
+import com.group.libraryapp.dto.controller.CalculatorMultiplyRequest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
