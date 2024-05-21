@@ -24,7 +24,7 @@
 - 결과 반환 X (HTTP 상태 200 OK이면 충분하다)
 
 ### 뼈대 만들기
-com.group.libraryapp.controller 패키지 안에 user 패키지를 만들고 UserController 를 만들어 주었다.
+com.group.libraryapp.controller 패키지 안에 user 패키지를 만들고 UserController 를 만들어 주었다. 
 ```
 package com.group.libraryapp.Controller.user;
 
@@ -41,8 +41,9 @@ public class UserController {
     }
 }
 ```
+또한 package com.group.libraryapp.dto.user 패키지 안에 userCreateRequest를 만들어 주었다.
 ```
-package com.group.libraryapp.dto;
+package com.group.libraryapp.dto.user;
 
 public class userCreateRequest {
     private String name;
@@ -58,9 +59,25 @@ public class userCreateRequest {
 }
 ```
 
-이제 뼈대를 잡았으니 실제 기능을 만들어야 한다. 원하는 것은 유저가 저장되는 것이다. 즉, 서버를 키고, API를 호출해 유저를 저장하면, 다시 불러올 수 있어야 한다. 가장 간단하게 API가 호출되면, User라는 클래스의 인스턴스를 만들고 이 데이터를 List에
-저장하도록 하자. User 클래스는 새로 만들어야 한다. com.group.libraryapp 안에 domain.user 패키지를 만들어 User 클래스를 만들어준다.
+이제 뼈대를 잡았으니 실제 기능을 만들어야 한다. 원하는 것은 유저가 저장되는 것이다. 즉, 서버를 키고, API를 호출해 유저를 저장하면, 다시 불러올 수 있어야 한다. 가장 간단하게 API가 호출되면, User라는 클래스의 인스턴스를 만들고 이 데이터를 List에 저장하도록 하자. User 클래스는 새로 만들어야 한다. com.group.libraryapp 안에 domain.user 패키지를 만들어 User 클래스를 만들어준다.
 
 ```
+package com.group.libraryapp.domain.user;
+
+public class User {
+    private String name;
+    private Integer age;
+    
+    public User(String name, Integer age) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException(String.format("잘못된 name(%s)이 들어왔습니다", name));
+        }
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+name에는 null이 들어오면 안 되고, 이름이 비어 있을 수도 없으므로 생성자에서 값을 검증해주도록 했다.
+
 
 
