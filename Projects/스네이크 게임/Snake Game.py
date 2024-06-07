@@ -40,9 +40,9 @@ def create_food():
     while True:
         x = random.randint(0, 19) * rSize
         y = random.randint(0, 19) * rSize
-        food = canvas.create_rectangle(x, y, x + rSize, y + rSize, fill="red") # x, y 랜덤 좌표에 rSize 크기인 사각형 먹이 객체 생성
-        
+                
         if (x, y) not in snake and (x, y) not in obstacles:  # 좌표가 스네이크 몸통이나 장애물 좌표와 겹치지 않을 때 반복문 종료
+            food = canvas.create_rectangle(x, y, x + rSize, y + rSize, fill="red") # x, y 랜덤 좌표에 rSize 크기인 사각형 먹이 객체 생성
             break
 
 def create_obstacles(count):
@@ -94,9 +94,9 @@ def countdown():
 def end_game():
     global running
     running = False
-    canvas.create_text(300, 200, fill="blue", text="게임 종료!", font=("Helvetica", 32))
-    canvas.create_text(300, 260, fill="blue", text="점수: " + str(score), font=("Helvetica", 24))
-    canvas.create_text(300, 320, fill="blue", text="재시작하려면 R키를 누르세요", font=("Helvetica", 24))
+    canvas.create_text(350, 300, fill="blue", text="게임 종료!", font=("Helvetica", 32))
+    canvas.create_text(350, 360, fill="blue", text="점수: " + str(score), font=("Helvetica", 24))
+    canvas.create_text(350, 420, fill="blue", text="재시작하려면 R키를 누르세요", font=("Helvetica", 24))
 
 def change_direction(event):
     global snake_direction
@@ -170,7 +170,7 @@ def game_loop(speed):
 
 def start_game(speed, obstacle_count):
     global current_obstacle_count
-    current_obstacle_count = obstacle_count
+    current_obstacle_count = obstacle_count # 현재 장애물 개수를 저장할 변수
     game_loop(speed)
     create_obstacles(obstacle_count)  # 장애물 생성
     countdown()  # 타이머 시작
@@ -190,22 +190,20 @@ img = PhotoImage(file="C:/Users/skcy1/OneDrive/Desktop/코딩/Programming-Study/
 # 캔버스에 이미지 삽입
 canvas.create_image(590, 40, anchor=NW, image=img)
 
-current_obstacle_count = 0  # 현재 장애물 개수를 저장할 변수
-
 game_main()  # 게임 초기화
 window.bind("<KeyPress>", change_direction)  # 키보드 입력 처리
 window.bind("<KeyPress-r>", restart_game)  # 게임 재시작 처리
 
 # 버튼 1 생성
-button1 = Button(window, text="쉬움", command=lambda: start_game(150, 6), width=8, height=3)
+button1 = Button(window, text="쉬움", command=lambda: start_game(125, 3), width=8, height=3)
 button1_window = canvas.create_window(180, 300, anchor="nw", window=button1)
 
 # 버튼 2 생성
-button2 = Button(window, text="보통", command=lambda: start_game(100, 9), width=8, height=3)
+button2 = Button(window, text="보통", command=lambda: start_game(100, 6), width=8, height=3)
 button2_window = canvas.create_window(320, 300, anchor="nw", window=button2)
 
 # 버튼 3 생성
-button3 = Button(window, text="어려움", command=lambda: start_game(100, 12), width=8, height=3)
+button3 = Button(window, text="어려움", command=lambda: start_game(75, 9), width=8, height=3)
 button3_window = canvas.create_window(460, 300, anchor="nw", window=button3)
 
 # 게임 루프 시작
