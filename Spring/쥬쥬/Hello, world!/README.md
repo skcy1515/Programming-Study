@@ -57,3 +57,26 @@ Get, Post, Put, Delete 각각 만들어주고
 ![image](https://github.com/user-attachments/assets/5f217101-74fe-41ff-8303-ea3529b57265)
 
 포스트맨 켜서 각각 테스트 해보기
+
+# Request Param
+package com.example.review.api 패키지에 TestRequestApi 클래스 추가하고
+```
+@RestController
+public class TestRequestApi {
+
+    // Request Parameter 방식
+    @GetMapping("/test/param")
+    public String requestParam(
+            @RequestParam("name") String name,
+            @RequestParam("age") Integer age
+    ) {
+        return "Hello, Request Param, I am " + name + ", " + age;
+    }
+}
+```
+추가
+
+![image](https://github.com/user-attachments/assets/3750edf7-a67b-47a5-a6f1-5b8207c14487)
+
+포스트맨으로 값을 넣은다음에 send 해보기
+
