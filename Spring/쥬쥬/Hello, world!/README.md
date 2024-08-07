@@ -80,3 +80,20 @@ public class TestRequestApi {
 
 포스트맨으로 값을 넣은다음에 send 해보기
 
+# Path Variable
+TestRequestApi 클래스에 코드 추가
+```
+    // Path Variable 방식
+    @GetMapping("/test/path/{name}/{age}")
+    public String requestPathVariable(
+            @PathVariable("name") String name,
+            @PathVariable("age") Integer age
+    ){
+        return "Hello, Path Variable" + name + age;
+    }
+```
+
+![image](https://github.com/user-attachments/assets/3b6932af-116f-4d14-8ad4-01606449e911)
+
+포스트맨으로 주소를 수정한 후 send 해보기
+
